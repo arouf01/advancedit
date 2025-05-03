@@ -1,0 +1,46 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+body {
+  background-color: white !important;
+  color: black !important;
+}
+
+.animated-text {
+  background: linear-gradient(90deg, #962cec, #3a86ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 200%;
+  animation: colorShift 4s ease-in-out infinite;
+}
+
+@keyframes colorShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.services {
+  position: relative;
+  background: linear-gradient(to top right, #4c1d95 50%, transparent 50%);
+  background-size: 0% 0%;
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  transition: all 0.4s ease-in-out, background-size 0.7s ease-in-out;
+  color: black;
+}
+
+.services:hover {
+  border-top-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  box-shadow: 0 5px 5px rgba(53, 22, 82, 0.3);
+  transform: scale(1.02);
+  background-size: 200% 200%;
+  color: #ffffff;
+}

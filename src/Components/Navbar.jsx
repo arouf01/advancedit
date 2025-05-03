@@ -1,6 +1,6 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
-
+import { Link, NavLink } from "react-router-dom";
+import AdvancedITLogo from "../assets/NavBarLogo.png";
 const Navbar = () => {
   const menu = [
     <>
@@ -50,7 +50,13 @@ const Navbar = () => {
             {menu}
           </ul>
         </div>
-        <NavLink className=" btn-ghost text-xl">Advanced IT</NavLink>
+        <Link className="flex items-center">
+          <img
+            src={AdvancedITLogo}
+            alt="Advanced IT Logo"
+            className="h-8 sm:h-12 md:h-14 lg:h-16 xl:h-18 w-auto object-contain"
+          />
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex ">
         <ul className="menu menu-horizontal px-1 ">{menu}</ul>

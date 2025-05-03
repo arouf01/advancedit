@@ -30,7 +30,7 @@ const Home = () => {
             <div className="w-full lg:w-1/2 text-center lg:text-left">
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
                 Automate Your Business with{" "}
-                <span className="animated-text text-primary">Zoho</span>
+                <span className="animated-text text-primary">ZOHO</span>
               </h1>
               <p className="py-4 text-base md:text-lg">
                 Enhance and grow your business operations using Zoho One.

@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://advanced-it.top/sitemap.xml

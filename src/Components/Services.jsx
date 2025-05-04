@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Services = () => {
   return (
     <div>
-      <div className="w-full p-6 md:p-12  mb-16 bg-[#F5F5F5]">
+      <div className="w-full md:p-12 lg:p-10 mb-16 bg-[#F5F5F5]">
         <div className="hero mx-auto text-black">
           <div className="hero-content flex flex-col-reverse lg:flex-row-reverse items-center gap-10">
             {/* Image */}

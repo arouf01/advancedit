@@ -13,7 +13,7 @@ import { Link } from "react-router-dom";
 const Home = () => {
   return (
     <div>
-      <div className="w-full p-6 md:p-12 lg:p-20 mb-16 bg-[#F5F5F5]">
+      <div className="w-full p-10 mb-16 bg-[#F5F5F5]">
         <div className="hero mx-auto text-black">
           <div className="hero-content flex flex-col-reverse lg:flex-row-reverse items-center gap-10">
             {/* Image */}
@@ -22,7 +22,7 @@ const Home = () => {
                 whileHover={{ scale: 1.05 }}
                 src={programmingImage}
                 alt="Programming"
-                className="w-full max-w-xs md:max-w-sm rounded-lg"
+                className="w-full max-w-md md:max-w-lg lg:max-w-[80%] rounded-lg"
               />
             </div>
 

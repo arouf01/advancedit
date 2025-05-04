@@ -44,3 +44,14 @@ body {
   background-size: 200% 200%;
   color: #ffffff;
 }
+
+/* Contact Us Page */
+.contact_us {
+  transition: all 0.3s ease;
+}
+.contact_us:hover {
+  box-shadow: 0 0 05px 0 rgba(0, 0, 0, 0.5);
+  border-top-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  transition: all 0.3s ease;
+}

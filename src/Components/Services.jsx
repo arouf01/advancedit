@@ -14,7 +14,7 @@ const Services = () => {
                 whileHover={{ scale: 1.05 }}
                 src={servicesImage}
                 alt="Programming"
-                className="w-full max-w-xs md:max-w-sm rounded-lg"
+                className="w-full max-w-md md:max-w-lg lg:max-w-xl rounded-lg"
               />
             </div>
 
@@ -24,8 +24,8 @@ const Services = () => {
                 Our <span className="animated-text text-primary">Services</span>
               </h1>
               <p className="py-4 text-base md:text-lg">
-                Advanced IT Solutions is an IT Consulting firm providing ZOHO
-                services for small to large businesses around the Globe
+                Advanced IT is an IT Consulting firm providing ZOHO services for
+                small to large businesses around the Globe
               </p>
             </div>
           </div>

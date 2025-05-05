@@ -15,9 +15,9 @@ const Home = () => {
     <div>
       <div className="w-full p-10 mb-16 bg-[#F5F5F5]">
         <div className="hero mx-auto text-black">
-          <div className="hero-content w-[1080px] flex flex-col-reverse lg:flex-row-reverse items-center gap-10">
+          <div className="hero-content lg:w-[1080px] md:w-full flex flex-col-reverse lg:flex-row-reverse items-center gap-10">
             {/* Image */}
-            <div className="w-full lg:w-1/2 flex justify-end">
+            <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
               <motion.img
                 whileHover={{ scale: 1.05 }}
                 src={programmingImage}
@@ -52,7 +52,7 @@ const Home = () => {
       {/* cards */}
 
       <div className="mb-15">
-        <div className="w-[1080px] mx-auto grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-5">
+        <div className="lg:w-[1080px] mx-auto justify-center grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 px-5">
           {/* Card 1 */}
           <div className="card w-full max-w-sm text-black shadow card-xl services">
             <div className="card-body">
@@ -165,7 +165,7 @@ const Home = () => {
 
       {/* Our technical team */}
       <div className="w-full bg-[#F5F5F5] text-center py-15">
-        <div className="w-[1080px] mx-auto">
+        <div className="lg:w-[1080px] mx-auto">
           <div>
             <h2 className="text-4xl font-bold">
               Our Technical <span className="animated-text">Team</span>

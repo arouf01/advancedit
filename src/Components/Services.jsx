@@ -7,7 +7,7 @@ const Services = () => {
     <div>
       <div className="w-full md:p-12 lg:p-10 mb-16 bg-[#F5F5F5]">
         <div className="hero mx-auto text-black">
-          <div className="hero-content flex flex-col-reverse lg:flex-row-reverse items-center gap-10">
+          <div className="hero-content lg:w-[1080px] flex flex-col-reverse lg:flex-row-reverse items-center gap-10 px-5">
             {/* Image */}
             <div className="w-full lg:w-1/2 flex justify-center">
               <motion.img
@@ -34,7 +34,7 @@ const Services = () => {
 
       {/* All Services */}
 
-      <div className="w-5/6 mx-auto grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-5 mb-15 ">
+      <div className="lg:w-[1080px] mx-auto grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-5 mb-15 justify-center px-5">
         {/* Card 1 */}
         <div className="card w-full max-w-sm text-black shadow card-xl services">
           <div className="card-body">

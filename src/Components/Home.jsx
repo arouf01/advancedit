@@ -11,6 +11,7 @@ import naim from "../assets/naim.jpg";
 import { motion } from "motion/react";
 import { Link } from "react-router-dom";
 import Team from "./Team";
+import Service from "./Service";
 const Home = () => {
   return (
     <div>
@@ -51,7 +52,6 @@ const Home = () => {
 
       {/* Services */}
       {/* cards */}
-
       <div className="mb-15">
         <div className="lg:w-[1080px] mx-auto justify-center grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 px-5">
           {/* Card 1 */}

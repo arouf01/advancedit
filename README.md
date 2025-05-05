@@ -1,12 +1,70 @@
-# React + Vite
+# Advanced IT 🌐
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the official GitHub repository of **Advanced IT** — a modern, responsive, and professional web presence for our IT solutions firm based in Bangladesh.
 
-Currently, two official plugins are available:
+## 🔗 Live Site
+👉 [Visit Website](https://advanced-it.top)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🧑‍💻 About Us
+**Advanced IT** is a team of passionate and experienced developers specializing in business automation, web application development, and cloud-based solutions. We’re particularly skilled in **ZOHO Development**, along with full-stack technologies like **JavaScript**, **React**, **Node.js**, and **WordPress**.
 
-## Expanding the ESLint configuration
+We’ve worked with clients across the globe, delivering tailored IT services and long-term support.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Services We Provide
+
+- 🔧 **Zoho Development**
+  - Zoho CRM, Creator, Flow, Books, Desk, Campaigns
+  - Custom Deluge scripting & automation
+  - Integration with third-party platforms
+
+- 🌐 **Website Development**
+  - Responsive websites using React.js, Next.js
+  - WordPress development and customization
+
+- ⚙️ **Web App Development**
+  - Full-stack apps using Node.js, Express, MongoDB
+  - Firebase-powered apps
+
+- 🎨 **UI/UX Design**
+  - Tailwind CSS for clean, mobile-first design
+  - Framer Motion animations for enhanced UX
+
+- 📊 **Business Automation**
+  - Workflow automation with Zoho and APIs
+  - Data syncing, custom dashboards, and more
+
+- 🧩 **API Integration**
+  - REST APIs, webhook handlers, and middleware development
+
+## 🚀 Technologies Used
+
+- **React.js** – Frontend library
+- **Tailwind CSS** – Utility-first CSS for responsive design
+- **Framer Motion** – Animations
+- **Firebase Hosting** – Deploy and host the live website
+- **React Router** – Client-side routing
+
+## 📂 Features
+
+- Fully responsive design (mobile & desktop)
+- Clean and modern UI
+- Animated components (Framer Motion)
+- FAQ Section with collapsible answers
+- Dynamic footer with social media links
+- SEO-friendly setup
+
+## 💬 Contact Us
+
+- 🌐 Website: [https://advanced-it.top](https://advanced-it.top)
+- 📧 Email: _work.abdur.rouf@gmail.com_
+- 📱 WhatsApp: [Click to Chat](https://wa.me/1749569015)
+- 🔗 LinkedIn: [Abdur Rouf](https://www.linkedin.com/in/abdur-rouf-ar/)
+- 💼 Fiverr: [dev_abdur_rouf](https://www.fiverr.com/dev_abdur_rouf)
+- 📘 Facebook: [Advanced IT Center](https://www.facebook.com/advance.it.center01/)
+
+## 📸 Screenshots
+![Live Demo](https://i.ibb.co/6RDS2cdS/Screenshot-2025-05-05-04-56-20-0.png)
+
+
+
+

@@ -143,6 +143,7 @@ const Faq = () => {
                 href="https://www.fiverr.com/dev_abdur_rouf"
                 className="text-primary underline"
                 target="_blank"
+                rel="nofollow external noopener noreferrer"
               >
                 Fiverr
               </a>
@@ -153,6 +154,7 @@ const Faq = () => {
                 href="https://www.linkedin.com/in/abdur-rouf-ar/"
                 className="text-primary underline ml-1"
                 target="_blank"
+                rel="nofollow external noopener noreferrer"
               >
                 LinkedIn
               </a>
@@ -161,6 +163,7 @@ const Faq = () => {
                 href="https://www.facebook.com/advance.it.center01/"
                 className="text-primary underline ml-1"
                 target="_blank"
+                rel="nofollow external noopener noreferrer"
               >
                 Facebook
               </a>

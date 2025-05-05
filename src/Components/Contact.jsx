@@ -11,7 +11,7 @@ const Contact = () => {
     <div>
       <div className="w-full mb-16 bg-[#F5F5F5]">
         <div className="hero mx-auto text-black">
-          <div className="hero-content flex flex-col-reverse lg:flex-row-reverse items-center gap-10">
+          <div className="hero-content lg:w-[1080px] px-5 flex flex-col-reverse lg:flex-row-reverse items-center gap-10">
             {/* Image */}
             <div className="w-full lg:w-1/2 flex justify-center">
               <motion.img
@@ -38,8 +38,8 @@ const Contact = () => {
       </div>
 
       {/* Contact Us */}
-      <div className="w-full text-center px-4 py-12 md:py-20 mx-auto">
-        <div>
+      <div className="w-full text-center py-12 md:py-20">
+        <div className="lg:w-[1080px] px-5 mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold">
             Have Any{" "}
             <span className="animated-text text-primary">Questions?</span>
@@ -49,7 +49,7 @@ const Contact = () => {
           <div className="divider divider-primary w-1/5 sm:w-[15%] md:w-[10%] mx-auto"></div>
 
           {/* Cards */}
-          <div className="w-full max-w-4xl mx-auto grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-10">
+          <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-10">
             {/* Whatsapp */}
             <a
               href="https://wa.me/1749569015"

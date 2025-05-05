@@ -27,7 +27,7 @@ const Footer = () => {
         <a
           href="https://wa.me/1749569015"
           target="_blank"
-          rel="noopener noreferrer"
+          rel="nofollow external noopener noreferrer"
           className="text-2xl hover:text-green-500"
         >
           <FaWhatsapp />
@@ -35,7 +35,7 @@ const Footer = () => {
         <a
           href="https://www.linkedin.com/in/abdur-rouf-ar/"
           target="_blank"
-          rel="noopener noreferrer"
+          rel="nofollow external noopener noreferrer"
           className="text-2xl hover:text-blue-600"
         >
           <FaLinkedinIn />
@@ -43,7 +43,7 @@ const Footer = () => {
         <a
           href="https://www.facebook.com/advance.it.center01/"
           target="_blank"
-          rel="noopener noreferrer"
+          rel="nofollow external noopener noreferrer"
           className="text-2xl hover:text-blue-700"
         >
           <FaFacebook />

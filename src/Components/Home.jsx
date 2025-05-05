@@ -52,12 +52,28 @@ const Home = () => {
 
       {/* Services */}
       {/* cards */}
+
       <div className="mb-15">
+        <div className="w-full text-center mb-15">
+          <h2 className="text-4xl font-bold mb-5">
+            Our <span className="animated-text">Services</span>
+          </h2>
+          <p className="text-base md:text-lg max-w-3xl mx-auto text-gray-700">
+            At Advanced IT, we specialize in delivering high-quality digital
+            solutions tailored to your business needs. Our team offers a wide
+            range of services including Zoho development, WordPress
+            customization, React and Node.js applications, and custom web
+            design. We combine creativity and technical expertise to help you
+            grow online efficiently and effectively.
+          </p>
+        </div>
+
         <div className="lg:w-[1080px] mx-auto justify-center grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 px-5">
           {/* Card 1 */}
+
           <div className="card w-full max-w-sm text-black shadow card-xl services">
             <div className="card-body">
-              <h2 className="card-title">Zoho Customization</h2>
+              <p className="text-[25px] card-title">Zoho Customization</p>
               <p>Modeling your business processes to Zoho.</p>
               <div className="justify-center card-actions">
                 <motion.button
@@ -73,7 +89,7 @@ const Home = () => {
           {/* Card 2 */}
           <div className="card w-full max-w-sm text-black shadow card-xl services">
             <div className="card-body">
-              <h2 className="card-title">Zoho Integration</h2>
+              <p className="text-[25px] card-title">Zoho Integration</p>
               <p>Connect your Zoho to other 3rd party apps.</p>
               <div className="justify-center card-actions">
                 <motion.button
@@ -89,7 +105,7 @@ const Home = () => {
           {/* Card 3 */}
           <div className="card w-full max-w-sm text-black shadow card-xl services">
             <div className="card-body">
-              <h2 className="card-title">Zoho One</h2>
+              <p className="text-[25px] card-title">Zoho One</p>
               <p>
                 Our Creator developer and CRM experts will help you to customize
                 ZOHO CRM to setup your business.
@@ -108,7 +124,7 @@ const Home = () => {
           {/* Card 4 */}
           <div className="card w-full max-w-sm text-black shadow card-xl services">
             <div className="card-body">
-              <h2 className="card-title">Zoho Consulting</h2>
+              <p className="text-[25px] card-title">Zoho Consulting</p>
               <p>
                 Advanced IT Solutions is an IT Consulting firm providing ZOHO
                 services.
@@ -127,7 +143,7 @@ const Home = () => {
           {/* Card 5 */}
           <div className="card w-full max-w-sm text-black shadow card-xl services">
             <div className="card-body">
-              <h2 className="card-title">Zoho Website</h2>
+              <p className="text-[25px] card-title">Zoho Website</p>
               <p>
                 We build business or ecommerce websites, accept orders, track
                 inventory, process payments.
@@ -146,7 +162,7 @@ const Home = () => {
           {/* Card 6 */}
           <div className="card w-full max-w-sm text-black shadow card-xl services">
             <div className="card-body">
-              <h2 className="card-title">Zoho Analytics & Report</h2>
+              <p className="text-[25px] card-title">Zoho Analytics & Report</p>
               <p>
                 Visually analyze & unhide insights of your data using business
                 intelligence software and data sources.

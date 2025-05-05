@@ -38,9 +38,9 @@ const Services = () => {
         {/* Card 1 */}
         <div className="card w-full max-w-sm text-black shadow card-xl services">
           <div className="card-body">
-            <h2 className="text-3xl bold card-title justify-center">
+            <p className="text-3xl bold card-title justify-center">
               Zoho <span className="animated-text">One</span>
-            </h2>
+            </p>
             <div className="divider divider-primary w-[10%] mx-auto"></div>
             <p className="mb-10">
               Our Creator developer and CRM experts will help you to customize
@@ -63,9 +63,9 @@ const Services = () => {
         {/* Card 2 */}
         <div className="card w-full max-w-sm text-black shadow card-xl services">
           <div className="card-body">
-            <h2 className="text-3xl bold card-title justify-center">
+            <p className="text-3xl bold card-title justify-center">
               Zoho <span className="animated-text">Automation</span>
-            </h2>
+            </p>
             <div className="divider divider-primary w-[10%] mx-auto"></div>
             <p>
               Advanced IT is an IT Consulting firm providing ZOHO services for
@@ -88,9 +88,9 @@ const Services = () => {
         {/* Card 3 */}
         <div className="card w-full max-w-sm text-black shadow card-xl services">
           <div className="card-body">
-            <h2 className="text-3xl bold card-title justify-center">
+            <p className="text-3xl bold card-title justify-center">
               Zoho <span className="animated-text">Integration</span>
-            </h2>
+            </p>
             <div className="divider divider-primary w-[10%] mx-auto"></div>
             <p>
               We can integrate other third party apps as per your business
@@ -113,9 +113,9 @@ const Services = () => {
         {/* Card 4 */}
         <div className="card w-full max-w-sm text-black shadow card-xl services">
           <div className="card-body">
-            <h2 className="text-3xl bold card-title justify-center">
+            <p className="text-3xl bold card-title justify-center">
               Zoho <span className="animated-text">Websites</span>
-            </h2>
+            </p>
             <div className="divider divider-primary w-[10%] mx-auto"></div>
             <p className="mb-10">
               We build a business or ecommerce websites , accept orders, track
@@ -137,9 +137,9 @@ const Services = () => {
         {/* Card 5 */}
         <div className="card w-full max-w-sm text-black shadow card-xl services">
           <div className="card-body">
-            <h2 className="text-3xl bold card-title justify-center">
+            <p className="text-3xl bold card-title justify-center">
               Zoho <span className="animated-text">Business</span>
-            </h2>
+            </p>
             <div className="divider divider-primary w-[10%] mx-auto"></div>
             <p>
               We help you to connect third party applications like
@@ -161,9 +161,9 @@ const Services = () => {
         {/* Card 6 */}
         <div className="card w-full max-w-sm text-black shadow card-xl services">
           <div className="card-body">
-            <h2 className="text-3xl bold card-title justify-center">
+            <p className="text-3xl bold card-title justify-center">
               Zoho <span className="animated-text">Custom Apps</span>
-            </h2>
+            </p>
             <div className="divider divider-primary w-[10%] mx-auto"></div>
             <p>
               Develop custom solutions for the unique needs of a global client
@@ -185,9 +185,9 @@ const Services = () => {
         {/* Card 7 */}
         <div className="card w-full max-w-sm text-black shadow card-xl services">
           <div className="card-body">
-            <h2 className="text-3xl bold card-title justify-center">
+            <p className="text-3xl bold card-title justify-center">
               Zoho <span className="animated-text">Migration</span>
-            </h2>
+            </p>
             <div className="divider divider-primary w-[10%] mx-auto"></div>
             <p>
               If you’re planning to upgrade from a legacy system to an instance
@@ -212,9 +212,9 @@ const Services = () => {
         {/* Card 8   */}
         <div className="card w-full max-w-sm text-black shadow card-xl services">
           <div className="card-body">
-            <h2 className="text-3xl bold card-title justify-center">
+            <p className="text-3xl bold card-title justify-center">
               SEO & <span className="animated-text">Marketing</span>
-            </h2>
+            </p>
             <div className="divider divider-primary w-[10%] mx-auto"></div>
             <p>
               We offer a full suite of search engine optimization and
@@ -239,9 +239,9 @@ const Services = () => {
         {/* Card 9 */}
         <div className="card w-full max-w-sm text-black shadow card-xl services">
           <div className="card-body">
-            <h2 className="text-3xl bold card-title justify-center">
+            <p className="text-3xl bold card-title justify-center">
               Zoho<span className="animated-text">Analytics</span>
-            </h2>
+            </p>
             <div className="divider divider-primary w-[10%] mx-auto"></div>
             <p>
               Visually Analyze & Unhide Insights Of Your Data Using Business

@@ -54,7 +54,7 @@ const Contact = () => {
             <a
               href="https://wa.me/1749569015"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="nofollow external noopener noreferrer"
               className="mx-auto"
             >
               <motion.div
@@ -67,7 +67,7 @@ const Contact = () => {
                   </div>
                 </figure>
                 <div className="card-body items-center text-center">
-                  <h2 className="card-title">WhatsApp</h2>
+                  <p className="text-[18px] card-title">WhatsApp</p>
                 </div>
               </motion.div>
             </a>
@@ -75,7 +75,7 @@ const Contact = () => {
             <a
               href="mailto:work.abdur.rouf@gmail.com"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="nofollow external noopener noreferrer"
               className="mx-auto"
             >
               <motion.div
@@ -88,7 +88,7 @@ const Contact = () => {
                   </div>
                 </figure>
                 <div className="card-body items-center text-center">
-                  <h2 className="card-title">Email</h2>
+                  <p className="text-[18px] card-title">Email</p>
                 </div>
               </motion.div>
             </a>
@@ -96,7 +96,7 @@ const Contact = () => {
             <a
               href="https://www.facebook.com/advance.it.center01/"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="nofollow external noopener noreferrer"
               className="mx-auto"
             >
               <motion.div
@@ -109,7 +109,7 @@ const Contact = () => {
                   </div>
                 </figure>
                 <div className="card-body items-center text-center">
-                  <h2 className="card-title">Facebook</h2>
+                  <p className="text-[18px] card-title">Facebook</p>
                 </div>
               </motion.div>
             </a>
@@ -117,7 +117,7 @@ const Contact = () => {
             <a
               href="https://www.linkedin.com/in/abdur-rouf-ar/"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="nofollow external noopener noreferrer"
               className="mx-auto"
             >
               <motion.div
@@ -130,7 +130,7 @@ const Contact = () => {
                   </div>
                 </figure>
                 <div className="card-body items-center text-center">
-                  <h2 className="card-title">LinkedIn</h2>
+                  <p className="text-[18px] card-title">LinkedIn</p>
                 </div>
               </motion.div>
             </a>
@@ -139,7 +139,7 @@ const Contact = () => {
             <a
               href="https://www.fiverr.com/dev_abdur_rouf"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="nofollow external noopener noreferrer"
               className="mx-auto"
             >
               <motion.div
@@ -152,7 +152,7 @@ const Contact = () => {
                   </div>
                 </figure>
                 <div className="card-body items-center text-center">
-                  <h2 className="card-title">Fiverr</h2>
+                  <p className="text-[18px] card-title">Fiverr</p>
                 </div>
               </motion.div>
             </a>
@@ -160,7 +160,7 @@ const Contact = () => {
             <a
               href="https://github.com/arouf01"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="nofollow external noopener noreferrer"
               className="mx-auto"
             >
               <motion.div
@@ -173,7 +173,7 @@ const Contact = () => {
                   </div>
                 </figure>
                 <div className="card-body items-center text-center">
-                  <h2 className="card-title">GitHub</h2>
+                  <p className="text-[18px] card-title">GitHub</p>
                 </div>
               </motion.div>
             </a>

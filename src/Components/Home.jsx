@@ -12,9 +12,15 @@ import { motion } from "motion/react";
 import { Link } from "react-router-dom";
 import Team from "./Team";
 import Service from "./Service";
+import { Helmet } from "react-helmet";
 const Home = () => {
   return (
     <div>
+      {/* SEO */}
+      <Helmet>
+        <title>Home | Advanced IT</title>
+        <link rel="canonical" href="https://advanced-it.top/" />
+      </Helmet>
       <div className="w-full p-10 mb-16 bg-[#F5F5F5]">
         <div className="hero mx-auto text-black">
           <div className="hero-content lg:w-[1080px] md:w-full flex flex-col-reverse lg:flex-row-reverse items-center gap-10">

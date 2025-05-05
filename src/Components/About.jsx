@@ -12,9 +12,15 @@ import sarwar from "../assets/sarwar.png";
 import naim from "../assets/naim.jpg";
 import "../../src/index.css";
 import Team from "./Team";
+import { Helmet } from "react-helmet";
 const About = () => {
   return (
     <div>
+      {/* SEO */}
+      <Helmet>
+        <title>About | Advanced IT</title>
+        <link rel="canonical" href="https://advanced-it.top/about" />
+      </Helmet>
       {/* About Us */}
       <div className="w-full mb-16   bg-[#F5F5F5]">
         <div className="hero mx-auto text-black">

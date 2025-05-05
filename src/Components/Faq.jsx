@@ -1,9 +1,14 @@
 import React from "react";
 import faq from "../assets/faq.png";
 import { motion } from "motion/react";
+import { Helmet } from "react-helmet";
 const Faq = () => {
   return (
     <div>
+      <Helmet>
+        <title>FAQ | Advanced IT</title>
+        <link rel="canonical" href="https://advanced-it.top/faq" />
+      </Helmet>
       <div className="w-full  md:p-12 lg:p-10 mb-16 bg-[#F5F5F5]">
         <div className="hero mx-auto text-black">
           <div className="hero-content lg:w-[1080px] mx-auto px-5 flex flex-col-reverse lg:flex-row-reverse items-center gap-10">

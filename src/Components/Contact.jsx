@@ -1,15 +1,67 @@
 import React from "react";
 import { motion } from "motion/react";
 import contactUs from "../assets/contactUs.png";
+import customerSupport from "../assets/customerSupport.png";
 import { FaWhatsapp, FaLinkedinIn, FaGithub, FaFacebook } from "react-icons/fa";
 import { TfiEmail } from "react-icons/tfi";
 import { TbBrandFiverr } from "react-icons/tb";
+import { Bounce, ToastContainer, toast } from "react-toastify";
 
 import "../../src/index.css";
 import { Helmet } from "react-helmet";
+import axios from "axios";
 const Contact = () => {
+  const handleFormSubmit = async (event) => {
+    event.preventDefault();
+    const form = event.target;
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData);
+
+    try {
+      const response = await axios.post(
+        "https://advanced-it-top.onrender.com/send-email",
+        data,
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+      console.log("Response:", response);
+      if (response.data.messageID) {
+        toast.success("Email Sent Successfully", {
+          position: "bottom-right",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: false,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+          transition: Bounce,
+        });
+      }
+
+      form.reset();
+    } catch (error) {
+      console.log("Error:", error);
+      toast.error("Failed To Send Email", {
+        position: "bottom-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: false,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        transition: Bounce,
+      });
+    }
+  };
+
   return (
     <div>
+      <ToastContainer />
       {/* SEO */}
       <Helmet>
         <title>Contact | Advanced IT</title>
@@ -44,7 +96,7 @@ const Contact = () => {
       </div>
 
       {/* Contact Us */}
-      <div className="w-full text-center py-12 md:py-20">
+      <div className="w-full mb-16 text-center ">
         <div className="lg:w-[1080px] px-5 mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold">
             Have Any{" "}
@@ -183,6 +235,91 @@ const Contact = () => {
                 </div>
               </motion.div>
             </a>
+          </div>
+        </div>
+      </div>
+
+      {/* Contact Form */}
+      <div className="w-full py-10 bg-[#F5F5F5]">
+        <div className="hero mx-auto text-black">
+          <div className="hero-content lg:w-[1080px] px-5 flex flex-col-reverse lg:flex-row-reverse items-center gap-10">
+            {/* Image Section */}
+            <div className="w-full lg:w-1/2 flex justify-center">
+              <img
+                src={customerSupport} // replace with your image
+                alt="customer Support"
+                className="w-full max-w-md md:max-w-lg lg:max-w-[80%] rounded-lg"
+              />
+            </div>
+
+            {/* Form Section */}
+            <div className="w-full lg:w-1/2">
+              <div className="card bg-white w-full shadow-xl mt-6">
+                <div className="card-body">
+                  <form onSubmit={handleFormSubmit} className="space-y-4">
+                    <div>
+                      <label className="label" htmlFor="name">
+                        Your Name
+                      </label>
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        className="input w-full bg-white border border-gray-300"
+                        placeholder="Enter your name"
+                        required
+                      />
+                    </div>
+
+                    <div>
+                      <label className="label" htmlFor="email">
+                        Email
+                      </label>
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        className="input w-full bg-white border border-gray-300"
+                        placeholder="Enter your email"
+                        required
+                      />
+                    </div>
+
+                    <div>
+                      <label className="label" htmlFor="subject">
+                        Subject
+                      </label>
+                      <input
+                        type="text"
+                        id="subject"
+                        name="subject"
+                        className="input w-full bg-white border border-gray-300"
+                        placeholder="Enter subject"
+                        required
+                      />
+                    </div>
+
+                    <div>
+                      <label className="label" htmlFor="message">
+                        Message
+                      </label>
+                      <textarea
+                        id="message"
+                        name="message"
+                        className="textarea w-full bg-white border border-gray-300"
+                        placeholder="Type your message"
+                        rows="4"
+                        required
+                      ></textarea>
+                    </div>
+
+                    <button type="submit" className="btn btn-neutral w-full">
+                      Send Message
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -4,12 +4,6 @@ import aboutUs from "../assets/aboutUs.png";
 import Established from "../assets/Established.jpg";
 import whoAreWe from "../assets/whoAreWe.png";
 
-import mizan from "../assets/mizan.png";
-import morshed from "../assets/morshed.jpg";
-import arouf from "../assets/a.rouf.jpg";
-import raihan from "../assets/raihan.jpg";
-import sarwar from "../assets/sarwar.png";
-import naim from "../assets/naim.jpg";
 import "../../src/index.css";
 import Team from "./Team";
 import { Helmet } from "react-helmet";

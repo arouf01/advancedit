@@ -2,16 +2,10 @@ import React from "react";
 
 import "../../src/index.css";
 import programmingImage from "../assets/programming.png";
-import mizan from "../assets/mizan.png";
-import morshed from "../assets/morshed.jpg";
-import arouf from "../assets/a.rouf.jpg";
-import raihan from "../assets/raihan.jpg";
-import sarwar from "../assets/sarwar.png";
-import naim from "../assets/naim.jpg";
 import { motion } from "motion/react";
 import { Link } from "react-router-dom";
 import Team from "./Team";
-import Service from "./Service";
+
 import { Helmet } from "react-helmet";
 const Home = () => {
   return (

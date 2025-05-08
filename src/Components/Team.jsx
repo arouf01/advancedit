@@ -1,10 +1,9 @@
 import "../../src/index.css";
-import programmingImage from "../assets/programming.png";
 import mizan from "../assets/mizan.png";
 import morshed from "../assets/morshed.jpg";
 import arouf from "../assets/a.rouf.jpg";
 import raihan from "../assets/raihan.jpg";
-import sarwar from "../assets/sarwar.png";
+import sarwar from "../assets/sarwar.jpg";
 import naim from "../assets/naim.jpg";
 import { motion } from "motion/react";
 

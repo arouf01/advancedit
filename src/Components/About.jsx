@@ -16,7 +16,7 @@ const About = () => {
         <link rel="canonical" href="https://advanced-it.top/about" />
       </Helmet>
       {/* About Us */}
-      <div className="w-full mb-16   bg-[#F5F5F5]">
+      <div className="w-full p-10 mb-16  bg-[#F5F5F5]">
         <div className="hero mx-auto text-black">
           <div className="hero-content lg:w-[1080px] flex flex-col-reverse lg:flex-row-reverse items-center gap-10 px-5">
             {/* Image */}

@@ -5,19 +5,19 @@ const Navbar = () => {
   const menu = [
     <>
       <li>
-        <NavLink to="/">Home</NavLink>
+        <a href="/">Home</a>
       </li>
       <li>
-        <NavLink to="/services">Services</NavLink>
+        <a href="/services">Services</a>
       </li>
       <li>
-        <NavLink to="/contact">Contact</NavLink>
+        <a href="/contact">Contact</a>
       </li>
       <li>
-        <NavLink to="/about">About</NavLink>
+        <a href="/about">About</a>
       </li>
       <li>
-        <NavLink to="/faq">FAQ</NavLink>
+        <a href="/faq">FAQ</a>
       </li>
     </>,
   ];

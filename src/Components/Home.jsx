@@ -12,7 +12,7 @@ const Home = () => {
     <div>
       {/* SEO */}
       <Helmet>
-        <title>Advanced IT</title>
+        <title>Home | Advanced IT</title>
         <link rel="canonical" href="https://advanced-it.top/" />
       </Helmet>
       <div className="w-full p-10 mb-16 bg-[#F5F5F5]">

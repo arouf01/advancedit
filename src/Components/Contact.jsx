@@ -19,7 +19,7 @@ const Contact = () => {
 
     try {
       const response = await axios.post(
-        "https://advanced-it-top.onrender.com/send-email",
+        "https://advanced-it-top-biyp.onrender.com/send-email",
         data,
         {
           headers: {

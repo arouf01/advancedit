@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "motion/react";
 import contactUs from "../assets/contactUs.png";
 import customerSupport from "../assets/customerSupport.png";
@@ -10,7 +10,10 @@ import { Bounce, ToastContainer, toast } from "react-toastify";
 import "../../src/index.css";
 import { Helmet } from "react-helmet";
 import axios from "axios";
+
 const Contact = () => {
+  const [loading, setLoading] = useState(false);
+
   const handleFormSubmit = async (event) => {
     event.preventDefault();
     const form = event.target;
@@ -18,6 +21,7 @@ const Contact = () => {
     const data = Object.fromEntries(formData);
 
     try {
+      setLoading(true);
       const response = await axios.post(
         "https://advanced-it-top-biyp.onrender.com/send-email",
         data,
@@ -27,6 +31,7 @@ const Contact = () => {
           },
         }
       );
+
       console.log("Response:", response);
       if (response.data.messageID) {
         toast.success("Email Sent Successfully", {
@@ -40,6 +45,7 @@ const Contact = () => {
           theme: "light",
           transition: Bounce,
         });
+        setLoading(false);
       }
 
       form.reset();
@@ -314,7 +320,13 @@ const Contact = () => {
                     </div>
 
                     <button type="submit" className="btn btn-neutral w-full">
-                      Send Message
+                      {loading ? (
+                        <>
+                          <span className="loading loading-dots loading-lg"></span>
+                        </>
+                      ) : (
+                        "Send Message"
+                      )}
                     </button>
                   </form>
                 </div>

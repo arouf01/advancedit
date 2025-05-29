@@ -318,12 +318,13 @@ const Contact = () => {
                         required
                       ></textarea>
                     </div>
-
-                    <button type="submit" className="btn btn-neutral w-full">
+                    <button
+                      type="submit"
+                      className="btn btn-neutral w-full disabled:!bg-[#070709] disabled:cursor-not-allowed"
+                      disabled={loading}
+                    >
                       {loading ? (
-                        <>
-                          <span className="loading loading-dots loading-lg"></span>
-                        </>
+                        <span className="text-white loading loading-dots loading-lg"></span>
                       ) : (
                         "Send Message"
                       )}

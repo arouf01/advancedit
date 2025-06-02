@@ -21,6 +21,9 @@ const Footer = () => {
         <NavLink to="/faq" className="link link-hover">
           FAQ
         </NavLink>
+        <NavLink to="/blogs" className="link link-hover">
+          Blogs
+        </NavLink>
       </nav>
 
       <nav className="flex justify-center gap-6 mb-4">

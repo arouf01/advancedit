@@ -24,7 +24,7 @@ const BlogDetails = () => {
     <div className="min-h-screen bg-white px-4 py-10">
       {/* SEO */}
       <Helmet>
-        <title>Blog | Advanced IT</title>
+        <title>{blog.title} | Advanced IT</title>
         <link rel="canonical" href={`https://advanced-it.top/${id}`} />
       </Helmet>
 

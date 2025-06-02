@@ -42,7 +42,18 @@ body {
   box-shadow: 0 5px 5px rgba(53, 22, 82, 0.3);
   transform: scale(1.02);
   background-size: 200% 200%;
-  color: #ffffff;
+  color: white;
+}
+
+/* Fix child element colors on hover */
+.services:hover .card-title,
+.services:hover p,
+.services:hover .text-gray-700,
+.services:hover .btn-outline,
+.services:hover a {
+  color: white !important;
+  border-color: white !important;
+  transition: all 0.7s ease-in-out;
 }
 
 /* Contact Us Page */

@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { motion } from "motion/react";
-import contactUs from "../assets/contactUs.png";
-import customerSupport from "../assets/customerSupport.png";
+import contactUs from "../assets/contactUs.webp";
+import customerSupport from "../assets/customerSupport.webp";
 import { FaWhatsapp, FaLinkedinIn, FaGithub, FaFacebook } from "react-icons/fa";
 import { TfiEmail } from "react-icons/tfi";
 import { TbBrandFiverr } from "react-icons/tb";

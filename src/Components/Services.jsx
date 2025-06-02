@@ -1,8 +1,11 @@
-import React from "react";
 import { motion } from "motion/react";
-import servicesImage from "../assets/services.png";
+import servicesImage from "../assets/services.webp";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
+const cardVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0 },
+};
 const Services = () => {
   return (
     <div>
@@ -40,235 +43,90 @@ const Services = () => {
 
       {/* All Services */}
 
-      <div className="lg:w-[1080px] mx-auto grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-5 mb-15 justify-center px-5">
-        {/* Card 1 */}
-        <div className="card w-full max-w-sm text-black shadow card-xl services">
-          <div className="card-body">
-            <p className="text-3xl bold card-title justify-center">
-              Zoho <span className="animated-text">One</span>
-            </p>
-            <div className="divider divider-primary w-[10%] mx-auto"></div>
-            <p className="mb-10">
-              Our Creator developer and CRM experts will help you to customize
-              ZOHO CRM to setup your business workflow to run your system
-              effectively & smoothly.Once this custom system goes live, We train
-              client-side users, offer first-level customer support and manage
-              relationships Professionally
-            </p>
-            <div className="justify-center card-actions">
-              <motion.button
-                whileHover={{ scale: 1.1 }}
-                className="btn btn-primary"
-              >
-                <Link to="/contact">Contact Us</Link>
-              </motion.button>
+      {/* Services Cards */}
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ staggerChildren: 0.2 }}
+        className="lg:w-[1080px] mx-auto grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-15 justify-center px-5"
+      >
+        {[
+          {
+            title: "Zoho One",
+            description:
+              "Our Creator developer and CRM experts will help you to customize ZOHO CRM to setup your business workflow to run your system effectively & smoothly. Once this custom system goes live, We train client-side users, offer first-level customer support and manage relationships professionally.",
+          },
+          {
+            title: "Zoho Automation",
+            description:
+              "Advanced IT is an IT Consulting firm providing ZOHO services for small to large businesses around the Globe. We understand customer needs and business processes. We plan how to integrate and implement one or more of Zoho’s 40+ products, including Zoho CRM, Zoho Creator, Zoho Finance & Campaigns.",
+          },
+          {
+            title: "Zoho Integration",
+            description:
+              "We can integrate other third-party apps as per your business needs. We scratch business workflow and then customize, integrate, implement Zoho solutions for our clients. We help you connect third-party applications like Mailchimp, QuickBooks or among ZOHO apps like Zoho CRM.",
+          },
+          {
+            title: "Zoho Websites",
+            description:
+              "We build business or ecommerce websites, accept orders, track inventory, process payments, manage shipping, market your brand, and analyze your data. Design your online store with our drag-and-drop builder and professional templates.",
+          },
+          {
+            title: "Zoho Business",
+            description:
+              "We help connect third-party applications like Mailchimp, QuickBooks, or other systems with Zoho apps. Integrate accounting, ERP, e-Commerce Self Service portals, and more with Zoho suite.",
+          },
+          {
+            title: "Zoho Custom Apps",
+            description:
+              "Develop custom solutions for unique needs. All apps are fully responsive and integrate with any Zoho service. Sell your app to millions via Zoho Marketplace.",
+          },
+          {
+            title: "Zoho Migration",
+            description:
+              "Planning to upgrade from a legacy system to Zoho? We handle complex data migration ensuring historical data is preserved post-implementation and optimization.",
+          },
+          {
+            title: "SEO Marketing",
+            description:
+              "We offer SEO and content services to improve your search rankings and visibility. From performance content to email marketing, we help grow your brand cost-effectively.",
+          },
+          {
+            title: "Zoho Analytics",
+            description:
+              "Uncover insights from your data using Zoho Analytics with connectors, charts, widgets, dashboards and secure sharing features.",
+          },
+        ].map((service, index) => (
+          <motion.div
+            key={index}
+            variants={cardVariants}
+            className="card w-full max-w-sm bg-white text-black shadow-lg hover:shadow-xl transition duration-300 border border-gray-100 services"
+          >
+            <div className="card-body">
+              <p className="text-3xl font-semibold card-title justify-center text-center mb-2">
+                {service.title.split(" ")[0]}{" "}
+                <span className="animated-text text-primary">
+                  {service.title.split(" ")[1]}
+                </span>
+              </p>
+              <div className="divider divider-primary w-[10%] mx-auto"></div>
+              <p className="mb-6 text-sm text-gray-700 leading-relaxed">
+                {service.description}
+              </p>
+              <div className="justify-center card-actions">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.2 }}
+                  className="btn btn-outline btn-primary"
+                >
+                  <Link to="/contact">Contact Us</Link>
+                </motion.button>
+              </div>
             </div>
-          </div>
-        </div>
-
-        {/* Card 2 */}
-        <div className="card w-full max-w-sm text-black shadow card-xl services">
-          <div className="card-body">
-            <p className="text-3xl bold card-title justify-center">
-              Zoho <span className="animated-text">Automation</span>
-            </p>
-            <div className="divider divider-primary w-[10%] mx-auto"></div>
-            <p>
-              Advanced IT is an IT Consulting firm providing ZOHO services for
-              small to large businesses around the Globe. We understand customer
-              needs and business processes.we plan how to integrate and
-              implement one or more of Zoho’s 40+ products, including Zoho CRM ,
-              Zoho Creator, Zoho Finance & Campaigns.
-            </p>
-            <div className="justify-center card-actions">
-              <motion.button
-                whileHover={{ scale: 1.1 }}
-                className="btn btn-primary"
-              >
-                <Link to="/contact">Contact Us</Link>
-              </motion.button>
-            </div>
-          </div>
-        </div>
-
-        {/* Card 3 */}
-        <div className="card w-full max-w-sm text-black shadow card-xl services">
-          <div className="card-body">
-            <p className="text-3xl bold card-title justify-center">
-              Zoho <span className="animated-text">Integration</span>
-            </p>
-            <div className="divider divider-primary w-[10%] mx-auto"></div>
-            <p>
-              We can integrate other third party apps as per your business
-              needs. We scratch business workflow and then customize, integrate,
-              implement Zoho solutions for our clients.We help you to connect
-              third party applications like Mailchimp,Quickbooks or among ZOHO
-              apps itself like Zoho CRM.
-            </p>
-            <div className="justify-center card-actions">
-              <motion.button
-                whileHover={{ scale: 1.1 }}
-                className="btn btn-primary"
-              >
-                <Link to="/contact">Contact Us</Link>
-              </motion.button>
-            </div>
-          </div>
-        </div>
-
-        {/* Card 4 */}
-        <div className="card w-full max-w-sm text-black shadow card-xl services">
-          <div className="card-body">
-            <p className="text-3xl bold card-title justify-center">
-              Zoho <span className="animated-text">Websites</span>
-            </p>
-            <div className="divider divider-primary w-[10%] mx-auto"></div>
-            <p className="mb-10">
-              We build a business or ecommerce websites , accept orders, track
-              inventory, process payments, manage shipping, market your brand,
-              and analyze your data. Design your online store yourself with our
-              drag-and-drop builder and professional website templates.
-            </p>
-            <div className="justify-center card-actions">
-              <motion.button
-                whileHover={{ scale: 1.1 }}
-                className="btn btn-primary"
-              >
-                <Link to="/contact">Contact Us</Link>
-              </motion.button>
-            </div>
-          </div>
-        </div>
-
-        {/* Card 5 */}
-        <div className="card w-full max-w-sm text-black shadow card-xl services">
-          <div className="card-body">
-            <p className="text-3xl bold card-title justify-center">
-              Zoho <span className="animated-text">Business</span>
-            </p>
-            <div className="divider divider-primary w-[10%] mx-auto"></div>
-            <p>
-              We help you to connect third party applications like
-              Mailchimp,Quickbooks or among ZOHO apps itself like Zoho CRM with
-              Zoho Creator etc.We can connect accounting, ERP , e-Commerce Self
-              Service portal and others with ZOHO suites.
-            </p>
-            <div className="justify-center card-actions">
-              <motion.button
-                whileHover={{ scale: 1.1 }}
-                className="btn btn-primary"
-              >
-                <Link to="/contact">Contact Us</Link>
-              </motion.button>
-            </div>
-          </div>
-        </div>
-
-        {/* Card 6 */}
-        <div className="card w-full max-w-sm text-black shadow card-xl services">
-          <div className="card-body">
-            <p className="text-3xl bold card-title justify-center">
-              Zoho <span className="animated-text">Custom Apps</span>
-            </p>
-            <div className="divider divider-primary w-[10%] mx-auto"></div>
-            <p>
-              Develop custom solutions for the unique needs of a global client
-              base. All apps you build are fully responsive across devices and
-              will integrate with any Zoho service.Sell your application to
-              millions of Zoho customers worldwide through the Zoho Marketplace
-            </p>
-            <div className="justify-center card-actions">
-              <motion.button
-                whileHover={{ scale: 1.1 }}
-                className="btn btn-primary"
-              >
-                <Link to="/contact">Contact Us</Link>
-              </motion.button>
-            </div>
-          </div>
-        </div>
-
-        {/* Card 7 */}
-        <div className="card w-full max-w-sm text-black shadow card-xl services">
-          <div className="card-body">
-            <p className="text-3xl bold card-title justify-center">
-              Zoho <span className="animated-text">Migration</span>
-            </p>
-            <div className="divider divider-primary w-[10%] mx-auto"></div>
-            <p>
-              If you’re planning to upgrade from a legacy system to an instance
-              of Zoho, there’s always one nasty roadblock that can prevent you
-              from having the smoothest project: that’s your data! Whether it’s
-              too complicated to export and import yourself, you aren’t sure how
-              it will translate to Zoho, or you just don’t have time to sit
-              through a data migration yourself, your historical data is the one
-              thing that completes your Zoho system after it’s been properly
-              implemented and optimized.
-            </p>
-            <div className="justify-center card-actions">
-              <motion.button
-                whileHover={{ scale: 1.1 }}
-                className="btn btn-primary"
-              >
-                <Link to="/contact">Contact Us</Link>
-              </motion.button>
-            </div>
-          </div>
-        </div>
-        {/* Card 8   */}
-        <div className="card w-full max-w-sm text-black shadow card-xl services">
-          <div className="card-body">
-            <p className="text-3xl bold card-title justify-center">
-              SEO & <span className="animated-text">Marketing</span>
-            </p>
-            <div className="divider divider-primary w-[10%] mx-auto"></div>
-            <p>
-              We offer a full suite of search engine optimization and
-              performance content services to help you understand what people
-              are searching for, to help optimise your content to best answer
-              these queries and to improve your ranking in search results on
-              search engines, eCommerce and content sharing channels.Looking for
-              a cost-effective way to grow your business? For every $1 spent on
-              email marketing, $44 is made in return. Our professional email
-              marketers help your business stay top-of-mind.
-            </p>
-            <div className="justify-center card-actions">
-              <motion.button
-                whileHover={{ scale: 1.1 }}
-                className="btn btn-primary"
-              >
-                <Link to="/contact">Contact Us</Link>
-              </motion.button>
-            </div>
-          </div>
-        </div>
-        {/* Card 9 */}
-        <div className="card w-full max-w-sm text-black shadow card-xl services">
-          <div className="card-body">
-            <p className="text-3xl bold card-title justify-center">
-              Zoho<span className="animated-text">Analytics</span>
-            </p>
-            <div className="divider divider-primary w-[10%] mx-auto"></div>
-            <p>
-              Visually Analyze & Unhide Insights Of Your Data Using Business
-              Intelligence Software Data Sources – It can feed data through
-              connector from many data sources like Google Drive, Drop Box and
-              can upload data from Excel files Charting Tools– Zoho reports has
-              variety of charting tools like bar, Map view, widget , pivot
-              tables etc. Sharing – It allows to share data like chart/dashboard
-              to your users based on your Organization pattern.
-            </p>
-            <div className="justify-center card-actions">
-              <motion.button
-                whileHover={{ scale: 1.1 }}
-                className="btn btn-primary"
-              >
-                <Link to="/contact">Contact Us</Link>
-              </motion.button>
-            </div>
-          </div>
-        </div>
-      </div>
+          </motion.div>
+        ))}
+      </motion.div>
     </div>
   );
 };

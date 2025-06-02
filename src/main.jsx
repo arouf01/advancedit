@@ -10,6 +10,7 @@ import About from "./Components/About.jsx";
 import Root from "./Components/Root.jsx";
 import BlogDetails from "./Components/BlogDetails.jsx";
 import BlogList from "./Components/BlogList.jsx";
+
 const router = createBrowserRouter([
   {
     path: "/",

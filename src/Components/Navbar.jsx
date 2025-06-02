@@ -1,6 +1,6 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
-import AdvancedITLogo from "../assets/NavBarLogo.png";
+import { Link } from "react-router-dom";
+import AdvancedITLogo from "../assets/NavBarLogo.webp";
 const Navbar = () => {
   const menu = [
     <>

@@ -1,5 +1,4 @@
-import React from "react";
-import faq from "../assets/faq.png";
+import faq from "../assets/faq.webp";
 import { motion } from "motion/react";
 import { Helmet } from "react-helmet";
 const Faq = () => {

@@ -1,4 +1,3 @@
-// src/pages/BlogList.jsx
 import { blogs } from "../data/blogs";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";

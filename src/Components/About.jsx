@@ -1,8 +1,7 @@
-import React from "react";
 import { motion } from "motion/react";
-import aboutUs from "../assets/aboutUs.png";
-import Established from "../assets/Established.jpg";
-import whoAreWe from "../assets/whoAreWe.png";
+import aboutUs from "../assets/aboutUs.webp";
+import Established from "../assets/Established.webp";
+import whoAreWe from "../assets/whoAreWe.webp";
 
 import "../../src/index.css";
 import Team from "./Team";

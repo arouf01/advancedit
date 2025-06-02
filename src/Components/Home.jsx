@@ -1,7 +1,5 @@
-import React from "react";
-
 import "../../src/index.css";
-import programmingImage from "../assets/programming.png";
+import programmingImage from "../assets/programming.webp";
 import { motion } from "motion/react";
 import { Link } from "react-router-dom";
 import Team from "./Team";
@@ -12,7 +10,9 @@ const Home = () => {
     <div>
       {/* SEO */}
       <Helmet>
-        <title>Home | Advanced IT</title>
+        <title>
+          Expert ZOHO Solutions & Services for Businesses | Advanced IT
+        </title>
         <link rel="canonical" href="https://advanced-it.top/" />
       </Helmet>
       <div className="w-full p-10 mb-16 bg-[#F5F5F5]">
@@ -30,7 +30,7 @@ const Home = () => {
 
             {/* Text */}
             <div className="w-full lg:w-1/2 text-center lg:text-left">
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
+              <h1 className="text-4xl md:text-4xl lg:text-5xl font-bold leading-tight">
                 Automate Your Business with{" "}
                 <span className="animated-text text-primary">ZOHO</span>
               </h1>
@@ -58,6 +58,7 @@ const Home = () => {
           <h2 className="text-4xl font-bold mb-5">
             Our <span className="animated-text">Services</span>
           </h2>
+          <div className="h-1 w-24 mx-auto bg-[#5A38C2] rounded mb-12"></div>
           <p className="text-base md:text-lg max-w-3xl mx-auto text-gray-700">
             At Advanced IT, we specialize in delivering high-quality digital
             solutions tailored to your business needs. Our team offers a wide

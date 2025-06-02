@@ -1,11 +1,13 @@
+import zohoCrmCustomizationByAdvancedIT from "../assets/blogs/zoho-crm-customization-by-advanced-it.webp";
+import zohoCrmImplementationByAdvancedIT from "../assets/blogs/zoho-crm-implementation-by-advanced-it.webp";
+import zohoOneImplementationServices from "../assets/blogs/zoho-one-implementation-services.webp";
 export const blogs = [
   {
     id: "zoho-crm-customization-by-advanced-it",
     title: "Expert Zoho CRM Customization by Advanced IT",
     date: "2025-06-02",
     author: "Abdur Rouf",
-    image:
-      "https://i.ibb.co/spkJs5X4/Expert-Zoho-CRM-Customization-by-Advanced-IT.png",
+    image: `${zohoCrmCustomizationByAdvancedIT}`,
     content: `
 In today’s fast-paced digital economy, a one-size-fits-all CRM just won’t do. Businesses require systems that are as unique as their processes — that’s where Advanced IT steps in with expert Zoho CRM customization.
 👇
@@ -75,8 +77,7 @@ Let’s get started today and turn your Zoho CRM into a powerhouse of productivi
       "Zoho CRM Implementation Services | Certified Experts at Advanced IT",
     date: "2025-06-01",
     author: "Abdur Rouf",
-    image:
-      "https://i.ibb.co/WvvfQW79/Zoho-CRM-Implementation-Services-Certified-Experts-at-Advanced-IT.png",
+    image: `${zohoCrmImplementationByAdvancedIT}`,
     content: `
 Looking to transform your business with Zoho CRM? Advanced IT is your trusted partner in certified Zoho CRM implementation—designed to help you boost productivity, enhance customer relationships, and scale with confidence.
 👇
@@ -187,8 +188,7 @@ Let’s build your Zoho CRM the smart way.
     title: "Zoho One Implementation Services | Certified Experts – Advanced IT",
     date: "2025-06-01",
     author: "Abdur Rouf",
-    image:
-      "https://i.ibb.co/7P1fR9q/Zoho-One-Implementation-Services-Certified-Experts-Advanced-IT.png",
+    image: `${zohoOneImplementationServices}`,
     content: `
 ### Is Your Business Ready to Embrace the Future of Unified Operations?
 

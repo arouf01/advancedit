@@ -2,7 +2,7 @@ import { blogs } from "../data/blogs";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet";
-
+import "../../src/index.css";
 const BlogList = () => {
   return (
     <div className="min-h-screen bg-white py-10 px-4">
@@ -12,10 +12,11 @@ const BlogList = () => {
         <link rel="canonical" href="https://advanced-it.top/blogs" />
       </Helmet>
       <div className="max-w-6xl mx-auto">
-        <h1 className="text-4xl font-bold text-center text-[#5A38C2] mb-10">
-          📚 Latest Blog Posts
+        <h1 className="text-4xl font-bold text-center mt-12">
+          📚 Latest <span className="animated-text">Blog Posts</span>
         </h1>
-
+        {/* Divider */}
+        <div className="h-1 w-24 mx-auto bg-[#5A38C2] rounded mt-5 mb-20 "></div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {blogs.map((blog, index) => (
             <motion.div
@@ -30,6 +31,7 @@ const BlogList = () => {
                   <img
                     src={blog.image}
                     alt={blog.title}
+                    title={blog.title}
                     className="w-full h-36 object-cover"
                   />
                 )}

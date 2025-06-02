@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import AdvancedITLogo from "../assets/NavBarLogo.webp";
 const Navbar = () => {
@@ -58,6 +57,7 @@ const Navbar = () => {
             <img
               src={AdvancedITLogo}
               alt="Advanced IT Logo"
+              title="Advanced IT Logo"
               className="h-8 sm:h-12 md:h-14 lg:h-16 xl:h-18 object-contain brightness-0 invert-[1]"
               width="180px"
               height="50px"

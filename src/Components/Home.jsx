@@ -23,7 +23,8 @@ const Home = () => {
               <motion.img
                 whileHover={{ scale: 1.05 }}
                 src={programmingImage}
-                alt="Programming"
+                title="Programming Image - Advanced IT"
+                alt="Programming Image - Advanced IT"
                 className="w-full max-w-md md:max-w-lg lg:max-w-[80%] rounded-lg"
               />
             </div>

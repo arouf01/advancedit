@@ -16,7 +16,8 @@ const Faq = () => {
               <motion.img
                 whileHover={{ scale: 1.05 }}
                 src={faq}
-                alt="Programming"
+                alt="Frequently Asked Questions - Advanced IT"
+                title="Frequently Asked Questions - Advanced IT"
                 className="w-full max-w-md md:max-w-lg lg:max-w-xl rounded-lg"
               />
             </div>
@@ -27,6 +28,7 @@ const Faq = () => {
                 Frequently Asked{" "}
                 <span className="animated-text text-primary">Questions</span>
               </h1>
+
               <p className="py-4 text-base md:text-lg">
                 Explore detailed answers to frequently asked questions about our
                 Zoho solutions, integration processes, technical support, and
@@ -41,10 +43,11 @@ const Faq = () => {
       {/* FAQ */}
       <div className="w-full bg-white text-black p-4 mb-15 md:p-8">
         <div className="space-y-4 max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-10">
+          <h2 className="text-3xl font-bold text-center">
             Frequently Asked <span className="animated-text">Questions</span>
           </h2>
-
+          {/* Divider */}
+          <div className="h-1 w-24 mx-auto bg-[#5A38C2] rounded mb-12 "></div>
           <div className="collapse collapse-arrow border border-base-300 bg-white">
             <input type="radio" name="faq-accordion" defaultChecked />
             <div className="collapse-title font-semibold text-lg">

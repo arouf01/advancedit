@@ -23,7 +23,8 @@ const About = () => {
               <motion.img
                 whileHover={{ scale: 1.05 }}
                 src={aboutUs}
-                alt="Programming"
+                alt="About Us - Advanced IT"
+                title="About Us - Advanced IT"
                 className="w-full max-w-md md:max-w-lg lg:max-w-[80%] rounded-lg"
               />
             </div>
@@ -52,11 +53,12 @@ const About = () => {
           <img
             className="w-full lg:w-1/2 max-w-md"
             src={Established}
-            alt="About Us"
+            alt="About Us - Established - Advanced IT"
+            title="About Us - Established - Advanced IT"
           />
           <div className="w-full lg:w-1/2 text-center lg:text-left">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Established in <span className="animated-text">2023</span>
+              Established in <span className="animated-text">2022</span>
             </h2>
             <p className="text-base md:text-lg">
               We build our developer team with -Full stack developer – having
@@ -94,7 +96,8 @@ const About = () => {
           <img
             className="w-full lg:w-1/2 max-w-md"
             src={whoAreWe}
-            alt="About Us"
+            alt="About Us - Who Are We - Advanced IT"
+            title="About Us - Who Are We - Advanced IT"
           />
         </div>
       </div>

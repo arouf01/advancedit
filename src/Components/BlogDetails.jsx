@@ -1,4 +1,3 @@
-// src/pages/BlogDetails.jsx
 import { useParams } from "react-router-dom";
 import { blogs } from "../data/blogs";
 import { useEffect } from "react";
@@ -40,6 +39,7 @@ const BlogDetails = () => {
             <img
               src={blog.image}
               alt={blog.title}
+              title={blog.title}
               className="w-full h-64 object-cover rounded-lg mb-6"
             />
           )}

@@ -22,7 +22,8 @@ const Services = () => {
               <motion.img
                 whileHover={{ scale: 1.05 }}
                 src={servicesImage}
-                alt="Programming"
+                title="Services CRM - Advanced IT"
+                alt="Services CRM - Advanced IT"
                 className="w-full max-w-md md:max-w-lg lg:max-w-xl rounded-lg"
               />
             </div>

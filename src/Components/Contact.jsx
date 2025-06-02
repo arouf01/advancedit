@@ -81,7 +81,8 @@ const Contact = () => {
               <motion.img
                 whileHover={{ scale: 1.05 }}
                 src={contactUs}
-                alt="Programming"
+                title="Contact Us - Advanced IT"
+                alt="Contact Us - Advanced IT"
                 className="w-full max-w-md md:max-w-lg lg:max-w-[80%] rounded-lg"
               />
             </div>
@@ -110,7 +111,7 @@ const Contact = () => {
           </h2>
 
           {/* Divider */}
-          <div className="divider divider-primary w-1/5 sm:w-[15%] md:w-[10%] mx-auto"></div>
+          <div className="h-1 w-24 mx-auto bg-[#5A38C2] rounded my-5 "></div>
 
           {/* Cards */}
           <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-10">
@@ -253,7 +254,8 @@ const Contact = () => {
             <div className="w-full lg:w-1/2 flex justify-center">
               <img
                 src={customerSupport} // replace with your image
-                alt="customer Support"
+                alt="Customer Support - Advanced IT"
+                title="Customer Support - Advanced IT"
                 className="w-full max-w-md md:max-w-lg lg:max-w-[80%] rounded-lg"
               />
             </div>

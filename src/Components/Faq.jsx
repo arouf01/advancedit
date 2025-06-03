@@ -1,12 +1,88 @@
 import faq from "../assets/faq.webp";
 import { motion } from "motion/react";
 import { Helmet } from "react-helmet";
+import {
+  getOrganizationSchema,
+  getFaqSchema,
+  getArticleSchema,
+} from "../utils/schemaGenerators";
+
 const Faq = () => {
+  const faqData = [
+    {
+      question: "What services does Advanced IT provide?",
+      answer:
+        "Advanced IT specializes in Zoho consulting, customization, and implementation services to help businesses automate their workflows and boost productivity.",
+    },
+    {
+      question: "What is Zoho and how can it help my business?",
+      answer:
+        "Zoho is a suite of cloud-based applications for business operations, including CRM, invoicing, email marketing, HR, and more. Advanced IT helps you tailor these apps to fit your business needs.",
+    },
+    {
+      question: "How do I get started with Advanced IT?",
+      answer:
+        "You can contact us via WhatsApp, Email, or the contact form on our website. We'll schedule a free consultation to understand your business and suggest the right Zoho solution.",
+    },
+    {
+      question: "Do you offer Zoho CRM customization?",
+      answer:
+        "Yes, we provide complete customization of Zoho CRM based on your business processes, including workflows, automation, custom fields, and integrations.",
+    },
+    {
+      question: "Is support available after project delivery?",
+      answer:
+        "Absolutely! We offer post-delivery support plans to ensure your system runs smoothly and grows with your business.",
+    },
+    {
+      question:
+        "Can you integrate Zoho with other platforms like WordPress or Shopify?",
+      answer:
+        "Yes, we specialize in integrating Zoho with third-party platforms like WordPress, Shopify, WooCommerce, and more using APIs and custom workflows.",
+    },
+    {
+      question: "What industries do you work with?",
+      answer:
+        "We work across various industries including education, healthcare, finance, real estate, and e-commerce—anywhere Zoho automation can add value.",
+    },
+    {
+      question: "How long does a Zoho implementation take?",
+      answer:
+        "Implementation timelines vary depending on project size, but most small to medium implementations are completed within 2–4 weeks.",
+    },
+    {
+      question: "Do you provide training for Zoho apps?",
+      answer:
+        "Yes, we offer personalized training sessions to help your team get comfortable using Zoho tools effectively.",
+    },
+    {
+      question: "Can you migrate data from my current CRM to Zoho?",
+      answer:
+        "Yes, we assist with secure data migration from your existing system to Zoho CRM with zero downtime.",
+    },
+  ];
   return (
     <div>
       <Helmet>
         <title>FAQ | Advanced IT</title>
         <link rel="canonical" href="https://advanced-it.top/faq" />
+        <script type="application/ld+json">
+          {JSON.stringify(getOrganizationSchema())}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(getFaqSchema(faqData))}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(
+            getArticleSchema({
+              title: "Frequently Asked Questions | Advanced IT",
+              description:
+                "Get answers to the most common questions about our ZOHO services, pricing, implementation process, and support at Advanced IT.",
+              url: `https://advanced-it.top/faq`,
+              author: "Abdur Rouf",
+            })
+          )}
+        </script>
       </Helmet>
       <div className="w-full p-10 mb-16 bg-[#F5F5F5]">
         <div className="hero mx-auto text-black">

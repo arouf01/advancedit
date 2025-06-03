@@ -4,7 +4,7 @@ import zohoOneImplementationServices from "../assets/blogs/zoho-one-implementati
 export const blogs = [
   {
     id: "zoho-crm-customization-by-advanced-it",
-    title: "Expert Zoho CRM Customization by Advanced IT",
+    title: "Expert Zoho CRM Customization",
     date: "2025-06-02",
     author: "Abdur Rouf",
     image: `${zohoCrmCustomizationByAdvancedIT}`,
@@ -73,8 +73,7 @@ Let’s get started today and turn your Zoho CRM into a powerhouse of productivi
   },
   {
     id: "zoho-crm-implementation-by-advanced-it",
-    title:
-      "Zoho CRM Implementation Services | Certified Experts at Advanced IT",
+    title: "Zoho CRM Implementation Services",
     date: "2025-06-01",
     author: "Abdur Rouf",
     image: `${zohoCrmImplementationByAdvancedIT}`,
@@ -185,7 +184,7 @@ Let’s build your Zoho CRM the smart way.
   },
   {
     id: "zoho-one-implementation-services",
-    title: "Zoho One Implementation Services | Certified Experts – Advanced IT",
+    title: "Zoho One Implementation Services",
     date: "2025-06-01",
     author: "Abdur Rouf",
     image: `${zohoOneImplementationServices}`,

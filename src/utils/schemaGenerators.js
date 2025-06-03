@@ -28,7 +28,7 @@ export const getOrganizationSchema = () => ({
 
 export const getFaqSchema = (faqs) => ({
   "@context": "https://schema.org",
-  "@type": "FAQPage",
+  "@type": "FAQ",
   mainEntity: faqs.map((faq) => ({
     "@type": "Question",
     name: faq.question,

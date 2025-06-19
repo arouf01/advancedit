@@ -69,9 +69,7 @@ const Home = () => {
     <div>
       {/* SEO */}
       <Helmet>
-        <title>
-          Expert ZOHO Solutions & Services for Businesses | Advanced IT
-        </title>
+        <title>Home | Expert ZOHO Solutions & Services for Businesses</title>
         <link rel="canonical" href="https://advanced-it.top/" />
         <script type="application/ld+json">
           {JSON.stringify(getOrganizationSchema())}

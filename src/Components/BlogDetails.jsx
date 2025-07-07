@@ -4,65 +4,20 @@ import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet";
 import {
+  TbBrandFiverr,
+  TbBulb,
+  TbRocket,
+  TbTools,
+  TbInfoCircle,
+  TbBuildingSkyscraper,
+} from "react-icons/tb";
+import {
   getOrganizationSchema,
   getFaqSchema,
   getArticleSchema,
 } from "../utils/schemaGenerators";
 
 const BlogDetails = () => {
-  const faqData = [
-    {
-      question: "What services does Advanced IT provide?",
-      answer:
-        "Advanced IT specializes in Zoho consulting, customization, and implementation services to help businesses automate their workflows and boost productivity.",
-    },
-    {
-      question: "What is Zoho and how can it help my business?",
-      answer:
-        "Zoho is a suite of cloud-based applications for business operations, including CRM, invoicing, email marketing, HR, and more. Advanced IT helps you tailor these apps to fit your business needs.",
-    },
-    {
-      question: "How do I get started with Advanced IT?",
-      answer:
-        "You can contact us via WhatsApp, Email, or the contact form on our website. We'll schedule a free consultation to understand your business and suggest the right Zoho solution.",
-    },
-    {
-      question: "Do you offer Zoho CRM customization?",
-      answer:
-        "Yes, we provide complete customization of Zoho CRM based on your business processes, including workflows, automation, custom fields, and integrations.",
-    },
-    {
-      question: "Is support available after project delivery?",
-      answer:
-        "Absolutely! We offer post-delivery support plans to ensure your system runs smoothly and grows with your business.",
-    },
-    {
-      question:
-        "Can you integrate Zoho with other platforms like WordPress or Shopify?",
-      answer:
-        "Yes, we specialize in integrating Zoho with third-party platforms like WordPress, Shopify, WooCommerce, and more using APIs and custom workflows.",
-    },
-    {
-      question: "What industries do you work with?",
-      answer:
-        "We work across various industries including education, healthcare, finance, real estate, and e-commerce—anywhere Zoho automation can add value.",
-    },
-    {
-      question: "How long does a Zoho implementation take?",
-      answer:
-        "Implementation timelines vary depending on project size, but most small to medium implementations are completed within 2–4 weeks.",
-    },
-    {
-      question: "Do you provide training for Zoho apps?",
-      answer:
-        "Yes, we offer personalized training sessions to help your team get comfortable using Zoho tools effectively.",
-    },
-    {
-      question: "Can you migrate data from my current CRM to Zoho?",
-      answer:
-        "Yes, we assist with secure data migration from your existing system to Zoho CRM with zero downtime.",
-    },
-  ];
   const { id } = useParams();
   const blog = blogs.find((item) => item.id === id);
 
@@ -78,26 +33,42 @@ const BlogDetails = () => {
     );
   }
 
+  const {
+    title,
+    image,
+    date,
+    author,
+    tags,
+    link,
+    content: {
+      header,
+      description,
+      servicesInclude,
+      whyChooseMe,
+      otherInfo,
+      whyUs,
+    },
+  } = blog;
+
   return (
-    <div className="min-h-screen bg-white px-4 py-10">
+    <div className="min-h-screen bg-white px-4 py-10 text-gray-800">
       {/* SEO */}
       <Helmet>
-        <title>{blog.title} | Advanced IT</title>
+        <title>{title} | Advanced IT</title>
         <link rel="canonical" href={`https://advanced-it.top/blogs/${id}`} />
         <script type="application/ld+json">
           {JSON.stringify(getOrganizationSchema())}
         </script>
         <script type="application/ld+json">
-          {JSON.stringify(getFaqSchema(faqData))}
+          {JSON.stringify(getFaqSchema([]))}
         </script>
         <script type="application/ld+json">
           {JSON.stringify(
             getArticleSchema({
-              title: `${blog.title} | Advanced IT`,
-              description:
-                "Explore expert tips, tutorials, and industry insights on ZOHO CRM, Books, Creator, and more from Advanced IT’s blog.",
+              title: `${title} | Advanced IT`,
+              description,
               url: `https://advanced-it.top/blogs/${id}`,
-              author: "Abdur Rouf",
+              author,
             })
           )}
         </script>
@@ -108,39 +79,121 @@ const BlogDetails = () => {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="bg-white rounded-xl shadow-lg p-6"
+          className="bg-white rounded-xl shadow-lg p-6 sm:p-10"
         >
-          {blog.image && (
+          {image && (
             <img
-              src={blog.image}
-              alt={blog.title}
-              title={blog.title}
+              src={image}
+              alt={title}
+              title={title}
               className="w-full h-64 object-cover rounded-lg mb-6"
             />
           )}
 
-          <h1 className="text-4xl font-bold text-[#5A38C2] mb-2">
-            {blog.title}
-          </h1>
-          <p className="text-sm text-gray-500 mb-4">
-            {blog.date} • By {blog.author}
+          <h1 className="text-4xl font-bold text-[#5A38C2] mb-2">{title}</h1>
+          <p className="text-sm text-gray-500 mb-6">
+            {date} • By {author}
           </p>
 
-          <div className="prose max-w-none prose-sm sm:prose-base prose-indigo text-gray-800">
-            {blog.content.split("\n").map((line, index) => (
-              <p key={index}>{line.trim()}</p>
-            ))}
-          </div>
+          <div className="space-y-6 text-base leading-relaxed">
+            <div>
+              <p className="text-xl font-semibold mb-1 text-purple-700">
+                {header}
+              </p>
+              <p>{description}</p>
+            </div>
 
-          <div className="mt-6 flex flex-wrap gap-2">
-            {blog.tags.map((tag) => (
-              <span
-                key={tag}
-                className="bg-[#5A38C2]/10 text-[#5A38C2] text-xs px-2 py-0.5 rounded-full"
-              >
-                #{tag}
-              </span>
-            ))}
+            <div>
+              <h2 className="flex items-center text-lg font-bold text-[#5A38C2] mt-6 mb-2">
+                <TbTools className="mr-2 text-xl text-indigo-600" />
+                Services I Offer
+              </h2>
+              <div className="pl-4 text-gray-700">
+                {servicesInclude
+                  .split("\n")
+                  .filter((line) => line.trim())
+                  .map((line, i) => (
+                    <p key={i}>🔹 {line}</p>
+                  ))}
+              </div>
+            </div>
+
+            <div>
+              <h2 className="flex items-center text-lg font-bold text-[#5A38C2] mt-6 mb-2">
+                <TbBulb className="mr-2 text-xl text-yellow-500" />
+                Why Choose Me
+              </h2>
+              <div className="pl-4 text-gray-700">
+                {whyChooseMe
+                  .split("\n")
+                  .filter((line) => line.trim())
+                  .map((line, i) => (
+                    <p key={i}>✅ {line}</p>
+                  ))}
+              </div>
+            </div>
+
+            <div>
+              <h2 className="flex items-center text-lg font-bold text-[#5A38C2] mt-6 mb-2">
+                <TbInfoCircle className="mr-2 text-xl text-blue-600" />
+                Perfect For
+              </h2>
+              <div className="pl-4 text-gray-700">
+                {otherInfo
+                  .split("\n")
+                  .filter((line) => line.trim())
+                  .map((line, i) => (
+                    <p key={i}>👉 {line}</p>
+                  ))}
+              </div>
+            </div>
+
+            <div>
+              <h2 className="flex items-center text-lg font-bold text-[#5A38C2] mt-6 mb-2">
+                <TbBuildingSkyscraper className="mr-2 text-xl text-green-600" />
+                Why Advanced IT?
+              </h2>
+              <div className="pl-4 text-gray-700">
+                {whyUs
+                  .split("\n")
+                  .filter((line) => line.trim())
+                  .map((line, i) => (
+                    <p key={i}>🏆 {line}</p>
+                  ))}
+              </div>
+            </div>
+
+            {/* Fiverr CTA */}
+            {link && (
+              <div className="mt-10 bg-[#1dbf73]/10 p-4 border border-[#1dbf73] rounded-lg flex items-center justify-between">
+                <div className="flex items-center gap-2">
+                  <TbBrandFiverr className="text-[#1dbf73] text-2xl" />
+                  <span className="font-medium text-[#1dbf73]">
+                    Need this service?
+                  </span>
+                </div>
+                <a
+                  href={link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-[#1dbf73] text-white px-4 py-1.5 rounded-md hover:bg-[#17a964] transition"
+                >
+                  View on Fiverr
+                </a>
+              </div>
+            )}
+
+            {/* Tags */}
+            <div className="mt-8 flex flex-wrap gap-2">
+              {tags.map((tag) => (
+                <span
+                  key={tag}
+                  className="bg-[#5A38C2]/10 text-[#5A38C2] text-xs px-2 py-0.5 rounded-full"
+                >
+                  #{tag}
+                </span>
+              ))}
+            </div>
           </div>
         </motion.div>
       </div>

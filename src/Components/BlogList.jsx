@@ -2,6 +2,7 @@ import { blogs } from "../data/blogs";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet";
+import { TbBrandFiverr } from "react-icons/tb";
 import "../../src/index.css";
 import {
   getOrganizationSchema,
@@ -63,6 +64,7 @@ const BlogList = () => {
         "Yes, we assist with secure data migration from your existing system to Zoho CRM with zero downtime.",
     },
   ];
+
   return (
     <div className="min-h-screen bg-white py-10 px-4">
       {/* SEO */}
@@ -87,12 +89,14 @@ const BlogList = () => {
           )}
         </script>
       </Helmet>
+
       <div className="max-w-6xl mx-auto">
         <h1 className="text-4xl font-bold text-center mt-12">
           📚 Latest <span className="animated-text">Blog Posts</span>
         </h1>
-        {/* Divider */}
-        <div className="h-1 w-24 mx-auto bg-[#5A38C2] rounded mt-5 mb-20 "></div>
+
+        <div className="h-1 w-24 mx-auto bg-[#5A38C2] rounded mt-5 mb-20"></div>
+
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {blogs.map((blog, index) => (
             <motion.div
@@ -111,29 +115,46 @@ const BlogList = () => {
                     className="w-full h-36 object-cover"
                   />
                 )}
-                <div className="p-4">
-                  <h2 className="text-lg font-semibold text-[#5A38C2] hover:underline">
-                    {blog.title}
-                  </h2>
-                  <p className="text-sm text-gray-500 mt-1">
-                    {blog.date} • {blog.author}
-                  </p>
-                  <p className="mt-2 text-gray-700 text-sm line-clamp-3">
-                    {blog.content.replace(/[#*`]/g, "").slice(0, 120)}...
-                  </p>
-
-                  <div className="flex flex-wrap mt-3 gap-1">
-                    {blog.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="bg-[#5A38C2]/10 text-[#5A38C2] text-xs px-2 py-0.5 rounded-full"
-                      >
-                        #{tag}
-                      </span>
-                    ))}
-                  </div>
-                </div>
               </Link>
+
+              <div className="p-4">
+                <h2 className="text-lg font-semibold text-[#5A38C2] hover:underline">
+                  {blog.title}
+                </h2>
+                <p className="text-sm text-gray-500 mt-1">
+                  {blog.date} • {blog.author}
+                </p>
+
+                <p className="mt-2 text-gray-700 text-sm line-clamp-3">
+                  {blog.content?.description?.slice(0, 120)}...
+                </p>
+
+                {/* Fiverr Link with Icon */}
+                {blog?.link && (
+                  <p className="mt-3 text-sm text-purple-700 flex items-center gap-1">
+                    <TbBrandFiverr className="text-green-600 text-lg" />
+                    <a
+                      href={blog.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:underline font-medium"
+                    >
+                      View Gig on Fiverr
+                    </a>
+                  </p>
+                )}
+
+                <div className="flex flex-wrap mt-3 gap-1">
+                  {blog.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="bg-[#5A38C2]/10 text-[#5A38C2] text-xs px-2 py-0.5 rounded-full"
+                    >
+                      #{tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
             </motion.div>
           ))}
         </div>

@@ -69,7 +69,7 @@ const BlogList = () => {
     <div className="min-h-screen bg-white py-10 px-4">
       {/* SEO */}
       <Helmet>
-        <title>Blogs | Advanced IT</title>
+        <title>Blogs - Advanced IT | Expert ZOHO Solutions & Services</title>
         <link rel="canonical" href="https://advanced-it.top/blogs" />
         <script type="application/ld+json">
           {JSON.stringify(getOrganizationSchema())}

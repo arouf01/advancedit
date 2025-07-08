@@ -64,7 +64,7 @@ const Faq = () => {
   return (
     <div>
       <Helmet>
-        <title>FAQ | Advanced IT</title>
+        <title>FAQ - Advanced IT | Expert ZOHO Solutions & Services</title>
         <link rel="canonical" href="https://advanced-it.top/faq" />
         <script type="application/ld+json">
           {JSON.stringify(getOrganizationSchema())}

@@ -23,6 +23,8 @@ export const getOrganizationSchema = () => ({
   sameAs: [
     "https://www.facebook.com/advance.it.center01/",
     "https://www.linkedin.com/in/abdur-rouf-ar/",
+    "https://www.fiverr.com/dev_abdur_rouf",
+    "https://github.com/arouf01",
   ],
 });
 

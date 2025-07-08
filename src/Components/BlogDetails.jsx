@@ -54,7 +54,7 @@ const BlogDetails = () => {
     <div className="min-h-screen bg-white px-4 py-10 text-gray-800">
       {/* SEO */}
       <Helmet>
-        <title>{title} | Advanced IT</title>
+        <title>{title} - Advanced IT</title>
         <link rel="canonical" href={`https://advanced-it.top/blogs/${id}`} />
         <script type="application/ld+json">
           {JSON.stringify(getOrganizationSchema())}

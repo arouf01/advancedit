@@ -130,7 +130,7 @@ const Contact = () => {
       <ToastContainer />
       {/* SEO */}
       <Helmet>
-        <title>Contact | Advanced IT</title>
+        <title>Contact - Advanced IT | Expert ZOHO Solutions & Services</title>
         <link rel="canonical" href="https://advanced-it.top/contact" />
         <script type="application/ld+json">
           {JSON.stringify(getOrganizationSchema())}

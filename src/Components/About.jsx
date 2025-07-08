@@ -70,7 +70,7 @@ const About = () => {
     <div>
       {/* SEO */}
       <Helmet>
-        <title>About | Advanced IT</title>
+        <title>About - Advanced IT | Expert ZOHO Solutions & Services</title>
         <link rel="canonical" href="https://advanced-it.top/about" />
         <script type="application/ld+json">
           {JSON.stringify(getOrganizationSchema())}

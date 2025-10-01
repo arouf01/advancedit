@@ -1,5 +1,7 @@
 import writeCustomDelugeScriptsForAnyZohoApps from "../assets/blogs/write-custom-deluge-scripts-for-any-zoho-apps.webp";
 import expertZohoWebsiteDesignService from "../assets/blogs/design-and-develop-a-responsive-website-using-zoho-sites-and-zoho-commerce.webp";
+import expertZohoCreatorService from "../assets/blogs/expertZohoCreatorService.webp";
+import expertZohoSalesIQService from "../assets/blogs/expertZohoSalesIQService.webp";
 export const blogs = [
   // Blog 1: Deluge Script
   {
@@ -116,5 +118,123 @@ Let's get started today.
       "EcommerceSolutions",
     ],
     link: `https://www.fiverr.com/dev_abdur_rouf/design-and-develop-a-responsive-website-using-zoho-sites-and-zoho-commerce`,
+  },
+
+  // Blog 3: Zoho Creator
+  {
+    id: "custom-app-development-with-zoho-creator",
+    title: "Build Custom Business Applications with Zoho Creator",
+    date: "2025-10-01",
+    author: "Abdur Rouf",
+    image: `${expertZohoCreatorService}`,
+    content: {
+      header: `Need a custom app that fits your business processes perfectly?`,
+      description: `I’m Abdur Rouf, a certified Zoho expert specializing in Zoho Creator. With 5+ years of experience, I help businesses design and build scalable, low-code applications that streamline operations, automate workflows, and integrate seamlessly with the Zoho ecosystem. From inventory management to HR, CRM extensions, and custom dashboards — I’ll transform your ideas into powerful apps.`,
+
+      servicesInclude: `
+Custom app development in Zoho Creator
+Database design & custom modules
+Workflow automation & approval processes
+Integration with Zoho CRM, Books, Inventory, Desk & third-party apps
+Custom reports, dashboards & analytics
+User roles, access control & client portals
+Mobile-ready apps for Android & iOS
+Data migration from legacy systems
+End-to-end testing & deployment
+    `,
+
+      whyChooseMe: `
+Zoho Creator expert with 5+ years of proven success
+Low-code, scalable, and secure applications
+Strong background in automation & API integration
+Affordable pricing starting at $120
+Fast delivery with clear communication
+    `,
+
+      otherInfo: `
+Perfect for: SMEs | Enterprises | Startups | Service Providers
+Message me before ordering to discuss requirements in detail.
+Your idea → My development → Your ready-to-use app!
+    `,
+
+      whyUs: `
+Official Zoho Creator Expert
+5+ Years of Development Experience
+Tailor-Made Solutions for Every Business
+Seamless Zoho & Third-Party Integrations
+Transparent Pricing & Dedicated Support
+Long-Term Maintenance & Optimization
+
+Let’s build your custom Zoho Creator app today.
+    `,
+    },
+    tags: [
+      "ZohoCreator",
+      "ZohoAppDevelopment",
+      "CustomApps",
+      "ZohoIntegration",
+      "WorkflowAutomation",
+      "ZohoExpert",
+      "LowCodeDevelopment",
+    ],
+    link: `https://www.fiverr.com/dev_abdur_rouf/create-modify-and-automate-zoho-creator-apps-with-deluge-scripting`,
+  },
+
+  // Blog 4: Zoho SalesIQ
+  {
+    id: "boost-customer-engagement-with-zoho-salesiq",
+    title: "Boost Customer Engagement & Conversions with Zoho SalesIQ",
+    date: "2025-10-01",
+    author: "Abdur Rouf",
+    image: `${expertZohoSalesIQService}`,
+    content: {
+      header: `Want to turn your website visitors into loyal customers?`,
+      description: `I’m Abdur Rouf, a Zoho expert with 5+ years of experience helping businesses leverage Zoho SalesIQ to engage visitors, track behavior, and boost conversions. With real-time live chat, visitor analytics, chatbots, and seamless CRM integration, SalesIQ transforms how you connect with your audience.`,
+
+      servicesInclude: `
+Zoho SalesIQ setup & configuration
+Live chat integration for websites & apps
+AI-powered chatbots & custom scripts
+Visitor tracking & lead scoring
+Integration with Zoho CRM, Desk, and other apps
+Custom branding & chat widget design
+Multi-language chat support
+Advanced reports & analytics setup
+Mobile app setup for on-the-go communication
+    `,
+
+      whyChooseMe: `
+Zoho expert with 5+ years of hands-on experience
+Proven success in boosting engagement & sales
+Deep integration knowledge with Zoho ecosystem
+Quick setup, training & ongoing support
+    `,
+
+      otherInfo: `
+Perfect for: E-commerce Stores | SaaS Companies | Service Providers | Startups
+Please message me before ordering to discuss your exact needs.
+    `,
+
+      whyUs: `
+Official Zoho SalesIQ Expert
+5+ Years of Domain Experience
+Tailored Engagement Strategies
+Seamless CRM & Helpdesk Integration
+Transparent Pricing & Long-Term Support
+Data-Driven Insights for Smarter Conversions
+
+Let’s transform your website into a lead-generation engine with SalesIQ.
+    `,
+    },
+    tags: [
+      "ZohoSalesIQ",
+      "CustomerEngagement",
+      "LiveChat",
+      "ZohoIntegration",
+      "Chatbots",
+      "ZohoExpert",
+      "LeadGeneration",
+    ],
+    link: `https://www.fiverr.com/dev_abdur_rouf/build-a-custom-zoho-salesiq-chatbot-zobot-with-deluge-scripting`,
   },
 ];

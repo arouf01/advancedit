@@ -1,4 +1,4 @@
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import aboutUs from "../assets/aboutUs.webp";
 import Established from "../assets/Established.webp";
 import whoAreWe from "../assets/whoAreWe.webp";
@@ -39,35 +39,10 @@ const About = () => {
       answer:
         "Absolutely! We offer post-delivery support plans to ensure your system runs smoothly and grows with your business.",
     },
-    {
-      question:
-        "Can you integrate Zoho with other platforms like WordPress or Shopify?",
-      answer:
-        "Yes, we specialize in integrating Zoho with third-party platforms like WordPress, Shopify, WooCommerce, and more using APIs and custom workflows.",
-    },
-    {
-      question: "What industries do you work with?",
-      answer:
-        "We work across various industries including education, healthcare, finance, real estate, and e-commerce—anywhere Zoho automation can add value.",
-    },
-    {
-      question: "How long does a Zoho implementation take?",
-      answer:
-        "Implementation timelines vary depending on project size, but most small to medium implementations are completed within 2–4 weeks.",
-    },
-    {
-      question: "Do you provide training for Zoho apps?",
-      answer:
-        "Yes, we offer personalized training sessions to help your team get comfortable using Zoho tools effectively.",
-    },
-    {
-      question: "Can you migrate data from my current CRM to Zoho?",
-      answer:
-        "Yes, we assist with secure data migration from your existing system to Zoho CRM with zero downtime.",
-    },
   ];
+
   return (
-    <div>
+    <div className="overflow-x-hidden">
       {/* SEO */}
       <Helmet>
         <title>About - Advanced IT | Expert ZOHO Solutions & Services</title>
@@ -90,96 +65,107 @@ const About = () => {
           )}
         </script>
       </Helmet>
-      {/* About Us */}
-      <div className="w-full p-10 mb-16  bg-[#F5F5F5]">
-        <div className="hero mx-auto text-black">
-          <div className="hero-content lg:w-[1080px] flex flex-col-reverse lg:flex-row-reverse items-center gap-10 px-5">
-            {/* Image */}
-            <div className="w-full lg:w-1/2 flex justify-center">
-              <motion.img
-                whileHover={{ scale: 1.05 }}
-                src={aboutUs}
-                alt="About Us - Advanced IT"
-                title="About Us - Advanced IT"
-                className="w-full max-w-md md:max-w-lg lg:max-w-[80%] rounded-lg"
-              />
-            </div>
 
-            {/* Text */}
-            <div className="w-full lg:w-1/2 text-center lg:text-left">
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
-                About <span className="animated-text text-primary">Us</span>
-              </h1>
-              <p className="py-4 text-base md:text-lg">
-                Advanced IT is a tech-driven company dedicated to helping
-                businesses grow through Zoho-powered solutions. We specialize in
-                customizing, integrating, and implementing Zoho apps to
-                streamline operations and boost efficiency. With a team that
-                loves learning and building, we create smart, scalable apps and
-                websites tailored to your business—always with a focus on
-                quality, creativity, and results.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      {/* Established */}
-      <div className="lg:w-[1080px] p-5 md:p-12 mx-auto">
-        <div className="w-full flex flex-col lg:flex-row items-center justify-between gap-8">
-          <img
-            className="w-full lg:w-1/2 max-w-md"
-            src={Established}
-            alt="About Us - Established - Advanced IT"
-            title="About Us - Established - Advanced IT"
-          />
-          <div className="w-full lg:w-1/2 text-center lg:text-left">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Established in <span className="animated-text">2022</span>
-            </h2>
-            <p className="text-base md:text-lg">
-              We build our developer team with -Full stack developer – having
-              wide range of technical skills so that we can deliver maximum
-              output to our clients.
+      {/* About Hero Section */}
+      <section className="relative w-full min-h-screen flex items-center justify-center bg-gradient-to-br from-white via-[#F9F9F9] to-white text-gray-900 p-10 mt-15 md:mt-15 sm:mt-15">
+        <div className="lg:w-[1080px] mx-auto flex flex-col-reverse lg:flex-row-reverse items-center gap-10 px-5">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1 }}
+            className="w-full lg:w-1/2 flex justify-center"
+          >
+            <motion.img
+              whileHover={{ scale: 1.05, rotate: 1 }}
+              src={aboutUs}
+              alt="About Us - Advanced IT"
+              title="About Us - Advanced IT"
+              className="w-[85%] max-w-sm md:max-w-md lg:max-w-lg rounded-2xl shadow-2xl"
+            />
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1 }}
+            className="w-full lg:w-1/2 text-center lg:text-left"
+          >
+            <h1 className="text-4xl md:text-5xl lg:text-5xl font-extrabold leading-tight text-gray-900">
+              About <span className="text-[#5D138B]">Us</span>
+            </h1>
+            <p className="mt-6 text-lg text-gray-700 max-w-lg mx-auto lg:mx-0">
+              Advanced IT is a tech-driven company dedicated to helping
+              businesses grow through Zoho-powered solutions. We specialize in
+              customizing, integrating, and implementing Zoho apps to streamline
+              operations and boost efficiency.
             </p>
-            <br />
-            <p className="text-base md:text-lg">
-              As every business has it’s own unique nature and workflow so it is
-              most important to understand client’s requirements and business
-              needs so we hear our clients and understand the needs first.{" "}
-              <span className="animated-text ">
-                Our implementation process ensures maximum success.
-              </span>
-            </p>
-          </div>
+          </motion.div>
         </div>
+      </section>
 
-        {/* Established 2 */}
-        <div className="w-full flex flex-col lg:flex-row items-center justify-between gap-8 mt-10">
-          <div className="w-full lg:w-1/2 text-center lg:text-left">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Who We <span className="animated-text">Are?</span>
-            </h2>
-            <p className="text-base md:text-lg">
-              <span className="animated-text">Welcome to Advanced IT</span>, a
-              dynamic IT solutions firm based in Bangladesh. We are a team of
-              young, skilled, and passionate Zoho developers with extensive
-              experience in delivering customized Zoho solutions. From startups
-              to enterprises, we’ve successfully executed projects across a wide
-              range of industries around the globe using Zoho Suite.
-            </p>
-          </div>
+      {/* Established Section */}
+      <section className="lg:w-[1080px] mx-auto px-5 py-12 flex flex-col lg:flex-row items-center gap-8">
+        <motion.img
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1 }}
+          src={Established}
+          alt="Established - Advanced IT"
+          title="Established - Advanced IT"
+          className="w-full lg:w-1/2 max-w-sm md:max-w-md lg:max-w-lg rounded-2xl shadow-lg"
+        />
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
+          className="w-full lg:w-1/2 text-center lg:text-left"
+        >
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Established in <span className="text-[#5D138B]">2022</span>
+          </h2>
+          <p className="text-gray-700 text-base md:text-lg mb-4">
+            We build our developer team with Full stack developers having a wide
+            range of technical skills so that we can deliver maximum output to
+            our clients.
+          </p>
+          <p className="text-gray-700 text-base md:text-lg">
+            Our implementation process ensures maximum success by understanding
+            client requirements and business needs before starting any project.
+          </p>
+        </motion.div>
+      </section>
 
-          <img
-            className="w-full lg:w-1/2 max-w-md"
-            src={whoAreWe}
-            alt="About Us - Who Are We - Advanced IT"
-            title="About Us - Who Are We - Advanced IT"
-          />
-        </div>
-      </div>
+      {/* Who We Are Section */}
+      <section className="lg:w-[1080px] mx-auto px-5 py-12 flex flex-col lg:flex-row items-center gap-8">
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
+          className="w-full lg:w-1/2 text-center lg:text-left"
+        >
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Who We <span className="text-[#5D138B]">Are</span>
+          </h2>
+          <p className="text-gray-700 text-base md:text-lg">
+            Welcome to Advanced IT, a dynamic IT solutions firm based in
+            Bangladesh. We are a team of young, skilled, and passionate Zoho
+            developers with extensive experience delivering customized Zoho
+            solutions worldwide.
+          </p>
+        </motion.div>
+        <motion.img
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1 }}
+          src={whoAreWe}
+          alt="Who We Are - Advanced IT"
+          title="Who We Are - Advanced IT"
+          className="w-full lg:w-1/2 max-w-sm md:max-w-md lg:max-w-lg rounded-2xl shadow-lg"
+        />
+      </section>
 
-      {/* Our technical team */}
-      <Team></Team>
+      {/* Our Team */}
+      <Team />
     </div>
   );
 };

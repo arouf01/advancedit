@@ -1,5 +1,5 @@
 import faq from "../assets/faq.webp";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import { Helmet } from "react-helmet";
 import {
   getOrganizationSchema,
@@ -34,35 +34,16 @@ const Faq = () => {
       answer:
         "Absolutely! We offer post-delivery support plans to ensure your system runs smoothly and grows with your business.",
     },
-    {
-      question:
-        "Can you integrate Zoho with other platforms like WordPress or Shopify?",
-      answer:
-        "Yes, we specialize in integrating Zoho with third-party platforms like WordPress, Shopify, WooCommerce, and more using APIs and custom workflows.",
-    },
-    {
-      question: "What industries do you work with?",
-      answer:
-        "We work across various industries including education, healthcare, finance, real estate, and e-commerce—anywhere Zoho automation can add value.",
-    },
-    {
-      question: "How long does a Zoho implementation take?",
-      answer:
-        "Implementation timelines vary depending on project size, but most small to medium implementations are completed within 2–4 weeks.",
-    },
-    {
-      question: "Do you provide training for Zoho apps?",
-      answer:
-        "Yes, we offer personalized training sessions to help your team get comfortable using Zoho tools effectively.",
-    },
-    {
-      question: "Can you migrate data from my current CRM to Zoho?",
-      answer:
-        "Yes, we assist with secure data migration from your existing system to Zoho CRM with zero downtime.",
-    },
   ];
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0 },
+  };
+
   return (
-    <div>
+    <div className="overflow-x-hidden">
+      {/* SEO */}
       <Helmet>
         <title>FAQ - Advanced IT | Expert ZOHO Solutions & Services</title>
         <link rel="canonical" href="https://advanced-it.top/faq" />
@@ -84,172 +65,66 @@ const Faq = () => {
           )}
         </script>
       </Helmet>
-      <div className="w-full p-10 mb-16 bg-[#F5F5F5]">
-        <div className="hero mx-auto text-black">
-          <div className="hero-content lg:w-[1080px] mx-auto px-5 flex flex-col-reverse lg:flex-row-reverse items-center gap-10">
-            {/* Image */}
-            <div className="w-full lg:w-1/2 flex justify-center">
-              <motion.img
-                whileHover={{ scale: 1.05 }}
-                src={faq}
-                alt="Frequently Asked Questions - Advanced IT"
-                title="Frequently Asked Questions - Advanced IT"
-                className="w-full max-w-md md:max-w-lg lg:max-w-xl rounded-lg"
-              />
-            </div>
 
-            {/* Text */}
-            <div className="w-full lg:w-1/2 text-center lg:text-left">
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
-                Frequently Asked{" "}
-                <span className="animated-text text-primary">Questions</span>
-              </h1>
+      {/* Hero Section */}
+      <section className="relative w-full min-h-screen flex items-center justify-center bg-gradient-to-br from-white via-[#F9F9F9] to-white text-gray-900 p-10 mt-15 md:mt-15 sm:mt-15">
+        <div className="lg:w-[1080px] mx-auto flex flex-col-reverse lg:flex-row-reverse items-center gap-10 px-5">
+          {/* Image */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1 }}
+            className="w-full lg:w-1/2 flex justify-center"
+          >
+            <motion.img
+              whileHover={{ scale: 1.05 }}
+              src={faq}
+              alt="Frequently Asked Questions - Advanced IT"
+              className="w-full max-w-sm md:max-w-md lg:max-w-lg rounded-2xl shadow-2xl"
+            />
+          </motion.div>
 
-              <p className="py-4 text-base md:text-lg">
-                Explore detailed answers to frequently asked questions about our
-                Zoho solutions, integration processes, technical support, and
-                service workflows. This section is designed to provide clarity
-                and assist you in navigating our offerings with confidence.
-              </p>
-            </div>
-          </div>
+          {/* Text */}
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1 }}
+            className="w-full lg:w-1/2 text-center lg:text-left"
+          >
+            <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900">
+              Frequently Asked <span className="text-[#5D138B]">Questions</span>
+            </h1>
+            <p className="mt-6 text-lg text-gray-700 max-w-lg mx-auto lg:mx-0">
+              Explore detailed answers to frequently asked questions about our
+              Zoho solutions, integration processes, technical support, and
+              service workflows. This section is designed to provide clarity and
+              assist you in navigating our offerings with confidence.
+            </p>
+          </motion.div>
         </div>
-      </div>
+      </section>
 
-      {/* FAQ */}
-      <div className="w-full bg-white text-black p-4 mb-15 md:p-8">
-        <div className="space-y-4 max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-center">
-            Frequently Asked <span className="animated-text">Questions</span>
-          </h2>
-          {/* Divider */}
-          <div className="h-1 w-24 mx-auto bg-[#5A38C2] rounded mb-12 "></div>
-          <div className="collapse collapse-arrow border border-base-300 bg-white">
-            <input type="radio" name="faq-accordion" defaultChecked />
-            <div className="collapse-title font-semibold text-lg">
-              Can I trial Zoho for Free before Purchasing?
-            </div>
-            <div className="collapse-content text-sm">Yes. You can.</div>
-          </div>
-
-          <div className="collapse collapse-arrow border border-base-300 bg-white">
-            <input type="radio" name="faq-accordion" />
-            <div className="collapse-title font-semibold text-lg">
-              On which Zoho products do you provide services?
-            </div>
-            <div className="collapse-content text-sm">
-              We provide services on all Zoho products. Starting from Zoho CRM,
-              Creator, Books, Analytics, Desk to all.
-            </div>
-          </div>
-
-          <div className="collapse collapse-arrow border border-base-300 bg-white">
-            <input type="radio" name="faq-accordion" />
-            <div className="collapse-title font-semibold text-lg">
-              What kind of services do you provide on Zoho?
-            </div>
-            <div className="collapse-content text-sm">
-              We write code in Zoho using Deluge (Zoho’s native/own language),
-              automate, develop, customize and modify default/existing settings.
-              Also, integarte Zoho with 3rd party application.
-            </div>
-          </div>
-
-          <div className="collapse collapse-arrow border border-base-300 bg-white">
-            <input type="radio" name="faq-accordion" />
-            <div className="collapse-title font-semibold text-lg">
-              Do you work on hourly or fixed price?
-            </div>
-            <div className="collapse-content text-sm">
-              We work on both hourly and fixed price basis depends on client’s
-              preference.
-              <ul className="list-disc pl-5 space-y-2">
-                <br />
-                <li>
-                  Hourly work depends on the client’s work complexity &
-                  consistent flow of long-term work.
-                </li>
-                <li>Fixed price depends on the client’s requirements.</li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="collapse collapse-arrow border border-base-300 bg-white">
-            <input type="radio" name="faq-accordion" />
-            <div className="collapse-title font-semibold text-lg">
-              Do I need to pay advance?
-            </div>
-            <div className="collapse-content text-sm">
-              No, you don’t need to pay advance. We only take payment after the
-              job is done. If you are happy with our services then you will need
-              to pay.
-            </div>
-          </div>
-          <div className="collapse collapse-arrow border border-base-300 bg-white">
-            <input type="radio" name="faq-accordion" />
-            <div className="collapse-title font-semibold text-lg">
-              I forgot my password. What should I do?
-            </div>
-            <div className="collapse-content text-sm">
-              Click on "Forgot Password" on the login page and follow the
-              instructions sent to your email.
-            </div>
-          </div>
-
-          <div className="collapse collapse-arrow border border-base-300 bg-white">
-            <input type="radio" name="faq-accordion" />
-            <div className="collapse-title font-semibold text-lg">
-              Do you provide other services outside Zoho?
-            </div>
-            <div className="collapse-content text-sm">
-              Yes, alongside Zoho solutions, we also offer services in
-              JavaScript, React, Node.js, and WordPress development to support a
-              wide range of web and app projects.
-            </div>
-          </div>
-
-          <div className="collapse collapse-arrow border border-base-300 bg-white">
-            <input type="radio" name="faq-accordion" />
-            <div className="collapse-title font-semibold text-lg">
-              Do you work in Marketplace Like Fiverr ,Freelancer.com etc since I
-              do feel comfortable and secured in Marketplace?
-            </div>
-            <div className="collapse-content text-sm">
-              Absolutely! We understand the importance of trust and security.
-              You can find and work with us on popular platforms like{" "}
-              <a
-                href="https://www.fiverr.com/dev_abdur_rouf"
-                className="text-primary underline"
-                target="_blank"
-                rel="nofollow external noopener noreferrer"
-              >
-                Fiverr
-              </a>
-              .
-              <br />
-              Feel free to also connect with us on
-              <a
-                href="https://www.linkedin.com/in/abdur-rouf-ar/"
-                className="text-primary underline ml-1"
-                target="_blank"
-                rel="nofollow external noopener noreferrer"
-              >
-                LinkedIn
-              </a>
-              ,
-              <a
-                href="https://www.facebook.com/advance.it.center01/"
-                className="text-primary underline ml-1"
-                target="_blank"
-                rel="nofollow external noopener noreferrer"
-              >
-                Facebook
-              </a>
-              .
-            </div>
-          </div>
-        </div>
-      </div>
+      {/* FAQ Cards */}
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ staggerChildren: 0.1 }}
+        className="lg:w-[1080px] mx-auto grid gap-6 px-5 py-16"
+      >
+        {faqData.map((faq, index) => (
+          <motion.div
+            key={index}
+            variants={cardVariants}
+            className="bg-white/70 backdrop-blur-md border border-gray-200 rounded-2xl shadow-lg p-6 hover:shadow-2xl transition duration-300"
+          >
+            <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3">
+              {faq.question}
+            </h3>
+            <p className="text-gray-700 text-base md:text-lg">{faq.answer}</p>
+          </motion.div>
+        ))}
+      </motion.div>
     </div>
   );
 };

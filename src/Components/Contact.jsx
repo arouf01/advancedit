@@ -1,15 +1,14 @@
 import { useState } from "react";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import contactUs from "../assets/contactUs.webp";
 import customerSupport from "../assets/customerSupport.webp";
 import { FaWhatsapp, FaLinkedinIn, FaGithub, FaFacebook } from "react-icons/fa";
 import { TfiEmail } from "react-icons/tfi";
 import { TbBrandFiverr } from "react-icons/tb";
-import { Bounce, ToastContainer, toast } from "react-toastify";
-
-import "../../src/index.css";
+import { ToastContainer, toast, Bounce } from "react-toastify";
 import { Helmet } from "react-helmet";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 import {
   getOrganizationSchema,
@@ -17,117 +16,95 @@ import {
   getArticleSchema,
 } from "../utils/schemaGenerators";
 
+const cardVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0 },
+};
+
 const Contact = () => {
   const faqData = [
     {
       question: "What services does Advanced IT provide?",
       answer:
-        "Advanced IT specializes in Zoho consulting, customization, and implementation services to help businesses automate their workflows and boost productivity.",
+        "Advanced IT specializes in Zoho consulting, customization, and implementation services to help businesses automate workflows.",
     },
     {
-      question: "What is Zoho and how can it help my business?",
+      question: "How can I contact Advanced IT?",
       answer:
-        "Zoho is a suite of cloud-based applications for business operations, including CRM, invoicing, email marketing, HR, and more. Advanced IT helps you tailor these apps to fit your business needs.",
-    },
-    {
-      question: "How do I get started with Advanced IT?",
-      answer:
-        "You can contact us via WhatsApp, Email, or the contact form on our website. We'll schedule a free consultation to understand your business and suggest the right Zoho solution.",
-    },
-    {
-      question: "Do you offer Zoho CRM customization?",
-      answer:
-        "Yes, we provide complete customization of Zoho CRM based on your business processes, including workflows, automation, custom fields, and integrations.",
-    },
-    {
-      question: "Is support available after project delivery?",
-      answer:
-        "Absolutely! We offer post-delivery support plans to ensure your system runs smoothly and grows with your business.",
-    },
-    {
-      question:
-        "Can you integrate Zoho with other platforms like WordPress or Shopify?",
-      answer:
-        "Yes, we specialize in integrating Zoho with third-party platforms like WordPress, Shopify, WooCommerce, and more using APIs and custom workflows.",
-    },
-    {
-      question: "What industries do you work with?",
-      answer:
-        "We work across various industries including education, healthcare, finance, real estate, and e-commerce—anywhere Zoho automation can add value.",
-    },
-    {
-      question: "How long does a Zoho implementation take?",
-      answer:
-        "Implementation timelines vary depending on project size, but most small to medium implementations are completed within 2–4 weeks.",
-    },
-    {
-      question: "Do you provide training for Zoho apps?",
-      answer:
-        "Yes, we offer personalized training sessions to help your team get comfortable using Zoho tools effectively.",
-    },
-    {
-      question: "Can you migrate data from my current CRM to Zoho?",
-      answer:
-        "Yes, we assist with secure data migration from your existing system to Zoho CRM with zero downtime.",
+        "You can reach us via WhatsApp, Email, LinkedIn, Fiverr, GitHub, or by filling out the contact form below.",
     },
   ];
 
   const [loading, setLoading] = useState(false);
 
-  const handleFormSubmit = async (event) => {
-    event.preventDefault();
-    const form = event.target;
-    const formData = new FormData(form);
-    const data = Object.fromEntries(formData);
+  const handleFormSubmit = async (e) => {
+    e.preventDefault();
+    const formData = Object.fromEntries(new FormData(e.target));
 
     try {
       setLoading(true);
       const response = await axios.post(
         "https://advanced-it-top-biyp.onrender.com/send-email",
-        data,
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
+        formData,
+        { headers: { "Content-Type": "application/json" } }
       );
 
-      console.log("Response:", response);
       if (response.data.messageID) {
-        toast.success("Email Sent Successfully", {
+        toast.success("✅ Email Sent Successfully", {
           position: "bottom-right",
           autoClose: 3000,
-          hideProgressBar: false,
-          closeOnClick: false,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "light",
           transition: Bounce,
         });
-        setLoading(false);
+        e.target.reset();
       }
-
-      form.reset();
-    } catch (error) {
-      console.log("Error:", error);
-      toast.error("Failed To Send Email", {
+      setLoading(false);
+    } catch (err) {
+      toast.error("❌ Failed To Send Email", {
         position: "bottom-right",
         autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: false,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
         transition: Bounce,
       });
+      setLoading(false);
     }
   };
 
+  const contactMethods = [
+    {
+      icon: <FaWhatsapp className="text-4xl" />,
+      name: "WhatsApp",
+      link: "https://wa.me/1749569015",
+    },
+    {
+      icon: <TfiEmail className="text-4xl" />,
+      name: "Email",
+      link: "mailto:work.abdur.rouf@gmail.com",
+    },
+    {
+      icon: <FaFacebook className="text-4xl" />,
+      name: "Facebook",
+      link: "https://www.facebook.com/advance.it.center01/",
+    },
+    {
+      icon: <FaLinkedinIn className="text-4xl" />,
+      name: "LinkedIn",
+      link: "https://www.linkedin.com/in/abdur-rouf-ar/",
+    },
+    {
+      icon: <TbBrandFiverr className="text-4xl" />,
+      name: "Fiverr",
+      link: "https://www.fiverr.com/dev_abdur_rouf",
+    },
+    {
+      icon: <FaGithub className="text-4xl" />,
+      name: "GitHub",
+      link: "https://github.com/arouf01",
+    },
+  ];
+
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <ToastContainer />
+
       {/* SEO */}
       <Helmet>
         <title>Contact - Advanced IT | Expert ZOHO Solutions & Services</title>
@@ -143,278 +120,132 @@ const Contact = () => {
             getArticleSchema({
               title: "Contact Advanced IT | Get in Touch for ZOHO Services",
               description:
-                "Reach out to Advanced IT for expert ZOHO solutions, consultation, and support. Get personalized assistance to optimize your business with our ZOHO services.",
-              url: `https://advanced-it.top/contact`,
+                "Reach out to Advanced IT for expert ZOHO solutions, consultation, and support.",
+              url: "https://advanced-it.top/contact",
               author: "Abdur Rouf",
             })
           )}
         </script>
       </Helmet>
-      <div className="w-full p-10 mb-16 bg-[#F5F5F5]">
-        <div className="hero mx-auto text-black">
-          <div className="hero-content lg:w-[1080px] px-5 flex flex-col-reverse lg:flex-row-reverse items-center gap-10">
-            {/* Image */}
-            <div className="w-full lg:w-1/2 flex justify-center">
-              <motion.img
-                whileHover={{ scale: 1.05 }}
-                src={contactUs}
-                title="Contact Us - Advanced IT"
-                alt="Contact Us - Advanced IT"
-                className="w-full max-w-md md:max-w-lg lg:max-w-[80%] rounded-lg"
-              />
-            </div>
 
-            {/* Text */}
-            <div className="w-full lg:w-1/2 text-center lg:text-left">
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
-                Contact <span className="animated-text text-primary">Us</span>
-              </h1>
-              <p className="py-4 text-base md:text-lg">
-                We are a dedicated team specializing in building elegant apps
-                and websites on Zoho. Our passion for learning and innovation
-                drives everything we do.
-              </p>
-            </div>
-          </div>
+      {/* Hero Section */}
+      <section className="relative w-full min-h-screen flex items-center justify-center bg-gradient-to-br from-white via-[#F9F9F9] to-white text-gray-900 p-10 mt-15 md:mt-15 sm:mt-15">
+        <div className="lg:w-[1080px] mx-auto flex flex-col-reverse lg:flex-row-reverse items-center gap-12 px-6">
+          {/* Image */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1 }}
+            className="w-full lg:w-1/2 flex justify-center"
+          >
+            <motion.img
+              whileHover={{ scale: 1.05, rotate: 1 }}
+              src={contactUs}
+              alt="Contact Advanced IT"
+              className="w-[85%] max-w-sm md:max-w-md lg:max-w-lg rounded-2xl shadow-2xl"
+            />
+          </motion.div>
+
+          {/* Text */}
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1 }}
+            className="w-full lg:w-1/2 text-center lg:text-left"
+          >
+            <h1 className="text-4xl md:text-5xl font-extrabold leading-tight text-gray-900">
+              Contact{" "}
+              <span className="text-[#5D138B] relative">
+                Us
+                <span className="absolute -bottom-1 left-0 w-full h-1 bg-[#5D138B]/30 rounded"></span>
+              </span>
+            </h1>
+            <p className="mt-6 text-lg text-gray-700 max-w-lg mx-auto lg:mx-0">
+              Reach out for expert Zoho solutions, automation, and consulting.
+              We are ready to help your business thrive.
+            </p>
+          </motion.div>
         </div>
-      </div>
+      </section>
 
-      {/* Contact Us */}
-      <div className="w-full mb-16 text-center ">
-        <div className="lg:w-[1080px] px-5 mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold">
-            Have Any{" "}
-            <span className="animated-text text-primary">Questions?</span>
-          </h2>
-
-          {/* Divider */}
-          <div className="h-1 w-24 mx-auto bg-[#5A38C2] rounded my-5 "></div>
-
-          {/* Cards */}
-          <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-10">
-            {/* Whatsapp */}
-            <a
-              href="https://wa.me/1749569015"
-              target="_blank"
-              rel="nofollow external noopener noreferrer"
-              className="mx-auto"
-            >
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                className="contact_us card w-72 shadow-md"
-              >
-                <figure className="flex justify-center pt-6">
-                  <div className="w-16 h-16 rounded-full bg-[#5938C2] flex items-center justify-center text-white">
-                    <FaWhatsapp className="text-4xl" />
-                  </div>
-                </figure>
-                <div className="card-body items-center text-center">
-                  <p className="text-[18px] card-title">WhatsApp</p>
-                </div>
-              </motion.div>
-            </a>
-            {/* Email */}
-            <a
-              href="mailto:work.abdur.rouf@gmail.com"
-              target="_blank"
-              rel="nofollow external noopener noreferrer"
-              className="mx-auto"
-            >
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                className="contact_us card w-72 shadow-md"
-              >
-                <figure className="flex justify-center pt-6">
-                  <div className="w-16 h-16 rounded-full bg-[#5938C2] flex items-center justify-center text-white">
-                    <TfiEmail className="text-4xl" />
-                  </div>
-                </figure>
-                <div className="card-body items-center text-center">
-                  <p className="text-[18px] card-title">Email</p>
-                </div>
-              </motion.div>
-            </a>
-            {/* Facebook */}
-            <a
-              href="https://www.facebook.com/advance.it.center01/"
-              target="_blank"
-              rel="nofollow external noopener noreferrer"
-              className="mx-auto"
-            >
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                className="contact_us card w-72 shadow-md"
-              >
-                <figure className="flex justify-center pt-6">
-                  <div className="w-16 h-16 rounded-full bg-[#5938C2] flex items-center justify-center text-white">
-                    <FaFacebook className="text-4xl" />
-                  </div>
-                </figure>
-                <div className="card-body items-center text-center">
-                  <p className="text-[18px] card-title">Facebook</p>
-                </div>
-              </motion.div>
-            </a>
-            {/* Linkedin */}
-            <a
-              href="https://www.linkedin.com/in/abdur-rouf-ar/"
-              target="_blank"
-              rel="nofollow external noopener noreferrer"
-              className="mx-auto"
-            >
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                className="contact_us card w-72 shadow-md"
-              >
-                <figure className="flex justify-center pt-6">
-                  <div className="w-16 h-16 rounded-full bg-[#5938C2] flex items-center justify-center text-white">
-                    <FaLinkedinIn className="text-4xl" />
-                  </div>
-                </figure>
-                <div className="card-body items-center text-center">
-                  <p className="text-[18px] card-title">LinkedIn</p>
-                </div>
-              </motion.div>
-            </a>
-
-            {/* Facebook */}
-            <a
-              href="https://www.fiverr.com/dev_abdur_rouf"
-              target="_blank"
-              rel="nofollow external noopener noreferrer"
-              className="mx-auto"
-            >
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                className="contact_us card w-72 shadow-md"
-              >
-                <figure className="flex justify-center pt-6">
-                  <div className="w-16 h-16 rounded-full bg-[#5938C2] flex items-center justify-center text-white">
-                    <TbBrandFiverr className="text-4xl" />
-                  </div>
-                </figure>
-                <div className="card-body items-center text-center">
-                  <p className="text-[18px] card-title">Fiverr</p>
-                </div>
-              </motion.div>
-            </a>
-            {/* Fiverr */}
-            <a
-              href="https://github.com/arouf01"
-              target="_blank"
-              rel="nofollow external noopener noreferrer"
-              className="mx-auto"
-            >
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                className="contact_us card w-72 shadow-md"
-              >
-                <figure className="flex justify-center pt-6">
-                  <div className="w-16 h-16 rounded-full bg-[#5938C2] flex items-center justify-center text-white">
-                    <FaGithub className="text-4xl" />
-                  </div>
-                </figure>
-                <div className="card-body items-center text-center">
-                  <p className="text-[18px] card-title">GitHub</p>
-                </div>
-              </motion.div>
-            </a>
-          </div>
-        </div>
-      </div>
+      {/* Contact Cards */}
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ staggerChildren: 0.2 }}
+        className="lg:w-[1080px] mx-auto grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-6 py-16"
+      >
+        {contactMethods.map((item, idx) => (
+          <motion.a
+            key={idx}
+            href={item.link}
+            target="_blank"
+            rel="nofollow noopener noreferrer"
+            variants={cardVariants}
+            className="relative bg-white/70 backdrop-blur-md border border-gray-200 shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 rounded-2xl overflow-hidden p-6 flex flex-col items-center"
+          >
+            <div className="w-16 h-16 rounded-full bg-[#5D138B] flex items-center justify-center text-white mb-4">
+              {item.icon}
+            </div>
+            <p className="text-lg font-semibold text-gray-900">{item.name}</p>
+          </motion.a>
+        ))}
+      </motion.div>
 
       {/* Contact Form */}
-      <div className="w-full py-10 bg-[#F5F5F5]">
-        <div className="hero mx-auto text-black">
-          <div className="hero-content lg:w-[1080px] px-5 flex flex-col-reverse lg:flex-row-reverse items-center gap-10">
-            {/* Image Section */}
-            <div className="w-full lg:w-1/2 flex justify-center">
-              <img
-                src={customerSupport} // replace with your image
-                alt="Customer Support - Advanced IT"
-                title="Customer Support - Advanced IT"
-                className="w-full max-w-md md:max-w-lg lg:max-w-[80%] rounded-lg"
-              />
-            </div>
-
-            {/* Form Section */}
-            <div className="w-full lg:w-1/2">
-              <div className="card bg-white w-full shadow-xl mt-6">
-                <div className="card-body">
-                  <form onSubmit={handleFormSubmit} className="space-y-4">
-                    <div>
-                      <label className="label" htmlFor="name">
-                        Your Name
-                      </label>
-                      <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        className="input w-full bg-white border border-gray-300"
-                        placeholder="Enter your name"
-                        required
-                      />
-                    </div>
-
-                    <div>
-                      <label className="label" htmlFor="email">
-                        Email
-                      </label>
-                      <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        className="input w-full bg-white border border-gray-300"
-                        placeholder="Enter your email"
-                        required
-                      />
-                    </div>
-
-                    <div>
-                      <label className="label" htmlFor="subject">
-                        Subject
-                      </label>
-                      <input
-                        type="text"
-                        id="subject"
-                        name="subject"
-                        className="input w-full bg-white border border-gray-300"
-                        placeholder="Enter subject"
-                        required
-                      />
-                    </div>
-
-                    <div>
-                      <label className="label" htmlFor="message">
-                        Message
-                      </label>
-                      <textarea
-                        id="message"
-                        name="message"
-                        className="textarea w-full bg-white border border-gray-300"
-                        placeholder="Type your message"
-                        rows="4"
-                        required
-                      ></textarea>
-                    </div>
-                    <button
-                      type="submit"
-                      className="btn btn-neutral w-full disabled:!bg-[#070709] disabled:cursor-not-allowed"
-                      disabled={loading}
-                    >
-                      {loading ? (
-                        <span className="text-white loading loading-dots loading-lg"></span>
-                      ) : (
-                        "Send Message"
-                      )}
-                    </button>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
+      <section className="lg:w-[1080px] mx-auto px-6 py-20 grid grid-cols-1 lg:grid-cols-2 gap-12">
+        {/* Image */}
+        <div className="flex justify-center items-center">
+          <img
+            src={customerSupport}
+            alt="Customer Support"
+            className="w-full max-w-md md:max-w-lg rounded-2xl shadow-2xl"
+          />
         </div>
-      </div>
+
+        {/* Form */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          className="bg-white/70 backdrop-blur-md border border-gray-200 rounded-2xl shadow-lg p-8"
+        >
+          <h2 className="text-3xl font-bold text-[#5D138B] mb-6 text-center">
+            Send us a Message
+          </h2>
+          <form onSubmit={handleFormSubmit} className="space-y-5">
+            {["name", "email", "subject"].map((field) => (
+              <input
+                key={field}
+                type={field === "email" ? "email" : "text"}
+                name={field}
+                placeholder={field.charAt(0).toUpperCase() + field.slice(1)}
+                className="w-full p-3 rounded-lg bg-white text-gray-900 placeholder-gray-400 border border-gray-300"
+                required
+              />
+            ))}
+            <textarea
+              name="message"
+              placeholder="Message"
+              rows={5}
+              className="w-full p-3 rounded-lg bg-white text-gray-900 placeholder-gray-400 border border-gray-300"
+              required
+            />
+            <button
+              type="submit"
+              disabled={loading}
+              className="w-full py-3 rounded-full bg-[#5D138B] text-white font-semibold hover:bg-[#4A0F6D] shadow-md transition"
+            >
+              {loading ? (
+                <span className="loading loading-dots loading-lg text-white"></span>
+              ) : (
+                "Send Message"
+              )}
+            </button>
+          </form>
+        </motion.div>
+      </section>
     </div>
   );
 };

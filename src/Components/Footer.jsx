@@ -4,61 +4,59 @@ import { FaWhatsapp, FaLinkedinIn, FaFacebook } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="footer flex flex-col items-center bg-base-200 text-base-content p-6 md:p-10">
-      <nav className="flex flex-wrap justify-center gap-4 mb-4">
-        <NavLink to="/" className="link link-hover">
-          Home
-        </NavLink>
-        <NavLink to="/services" className="link link-hover">
-          Services
-        </NavLink>
-        <NavLink to="/contact" className="link link-hover">
-          Contact
-        </NavLink>
-        <NavLink to="/about" className="link link-hover">
-          About
-        </NavLink>
-        <NavLink to="/faq" className="link link-hover">
-          FAQ
-        </NavLink>
-        <NavLink to="/blogs" className="link link-hover">
-          Blogs
-        </NavLink>
-      </nav>
+    <footer className="w-full bg-gray-900 text-gray-300 p-8 md:p-12 mt-16">
+      <div className="max-w-6xl mx-auto flex flex-col items-center space-y-6">
+        {/* Navigation Links */}
+        <nav className="flex flex-wrap justify-center gap-6">
+          {["/", "/services", "/contact", "/about", "/faq", "/blogs"].map(
+            (path, index) => (
+              <NavLink
+                key={index}
+                to={path}
+                className="text-gray-300 hover:text-[#5D138B] font-medium transition"
+              >
+                {path === "/"
+                  ? "Home"
+                  : path.slice(1).charAt(0).toUpperCase() + path.slice(2)}
+              </NavLink>
+            )
+          )}
+        </nav>
 
-      <nav className="flex justify-center gap-6 mb-4">
-        <a
-          href="https://wa.me/1749569015"
-          target="_blank"
-          rel="nofollow external noopener noreferrer"
-          className="text-2xl hover:text-green-500"
-        >
-          <FaWhatsapp />
-        </a>
-        <a
-          href="https://www.linkedin.com/in/abdur-rouf-ar/"
-          target="_blank"
-          rel="nofollow external noopener noreferrer"
-          className="text-2xl hover:text-blue-600"
-        >
-          <FaLinkedinIn />
-        </a>
-        <a
-          href="https://www.facebook.com/advance.it.center01/"
-          target="_blank"
-          rel="nofollow external noopener noreferrer"
-          className="text-2xl hover:text-blue-700"
-        >
-          <FaFacebook />
-        </a>
-      </nav>
+        {/* Social Icons */}
+        <nav className="flex justify-center gap-6 text-2xl">
+          <a
+            href="https://wa.me/1749569015"
+            target="_blank"
+            rel="nofollow external noopener noreferrer"
+            className="hover:text-green-500 transition"
+          >
+            <FaWhatsapp />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/abdur-rouf-ar/"
+            target="_blank"
+            rel="nofollow external noopener noreferrer"
+            className="hover:text-blue-500 transition"
+          >
+            <FaLinkedinIn />
+          </a>
+          <a
+            href="https://www.facebook.com/advance.it.center01/"
+            target="_blank"
+            rel="nofollow external noopener noreferrer"
+            className="hover:text-blue-600 transition"
+          >
+            <FaFacebook />
+          </a>
+        </nav>
 
-      <aside className="text-sm text-center">
-        <p>
+        {/* Copyright */}
+        <aside className="text-sm text-center text-gray-400">
           © {new Date().getFullYear()} - All rights reserved by{" "}
-          <strong>Advanced IT</strong>
-        </p>
-      </aside>
+          <strong className="text-[#5D138B]">Advanced IT</strong>
+        </aside>
+      </div>
     </footer>
   );
 };

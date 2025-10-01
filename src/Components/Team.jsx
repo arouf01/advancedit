@@ -5,6 +5,7 @@ import morshed from "../assets/teamMember/morshed.webp";
 import arouf from "../assets/teamMember/abdur_rouf.webp";
 import raihan from "../assets/teamMember/raihan.webp";
 import naim from "../assets/teamMember/naim.webp";
+import limon from "../assets/teamMember/limon.webp";
 import { motion } from "framer-motion";
 
 const Team = () => {
@@ -19,6 +20,7 @@ const Team = () => {
     { img: arouf, name: "Abdur Rouf", title: "Zoho Developer" },
     { img: morshed, name: "Morshed Ali", title: "Zoho Developer" },
     { img: naim, name: "Naim Ali", title: "Zoho Developer" },
+    { img: limon, name: "Shahriar Khan Limon", title: "Zoho Developer" },
   ];
 
   return (

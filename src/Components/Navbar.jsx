@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import AdvancedITLogo from "../assets/NavBarLogo.webp";
+import AdvancedITLogo from "../assets/logo.png";
 
 const Navbar = () => {
   const navItems = [
@@ -75,7 +75,7 @@ const Navbar = () => {
               alt="Advanced IT Logo"
               title="Advanced IT Logo"
               className="h-12 md:h-14 lg:h-16 object-contain brightness-0 invert"
-              width="180"
+              width="100%"
               height="60"
             />
           </NavLink>

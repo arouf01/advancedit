@@ -3,7 +3,7 @@ export const getOrganizationSchema = () => ({
   "@type": "Organization",
   name: "Advanced IT",
   url: "https://advanced-it.top/",
-  logo: "https://advanced-it.top/assets/NavBarLogo-CxDsP5fV.webp",
+  logo: "https://advanced-it.top/assets/logo.png",
   description:
     "Advanced IT provides professional ZOHO consulting, customization, and implementation services to streamline your business operations. Boost productivity with our end-to-end ZOHO support.",
   email: "work.abdur.rouf@gmail.com",

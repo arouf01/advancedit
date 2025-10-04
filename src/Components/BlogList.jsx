@@ -29,7 +29,7 @@ const BlogList = () => {
   };
 
   return (
-    <div className="overflow-x-hidden bg-[#F5F5F5] min-h-screen py-10 px-4 mt-15 md:mt-15 sm:mt-15">
+    <div className="overflow-x-hidden bg-[#F5F5F5] min-h-screen py-10 px-4 mt-15 ">
       {/* SEO */}
       <Helmet>
         <title>Blogs - Advanced IT | Expert ZOHO Solutions & Services</title>
@@ -62,10 +62,9 @@ const BlogList = () => {
         <div className="h-1 w-24 mx-auto bg-[#5D138B] rounded mt-5 mb-12"></div>
 
         <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ staggerChildren: 0.1 }}
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1 }}
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
         >
           {blogs.map((blog, index) => (

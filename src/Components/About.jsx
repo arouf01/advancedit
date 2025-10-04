@@ -67,7 +67,7 @@ const About = () => {
       </Helmet>
 
       {/* About Hero Section */}
-      <section className="relative w-full min-h-screen flex items-center justify-center bg-gradient-to-br from-white via-[#F9F9F9] to-white text-gray-900 p-10 mt-15 md:mt-15 sm:mt-15">
+      <section className="relative w-full min-h-screen flex items-center justify-center bg-gradient-to-br from-white via-[#F9F9F9] to-white text-gray-900 lg:p-10 mt-15">
         <div className="lg:w-[1080px] mx-auto flex flex-col-reverse lg:flex-row-reverse items-center gap-10 px-5">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}

@@ -51,7 +51,7 @@ const BlogDetails = () => {
   } = blog;
 
   return (
-    <div className="min-h-screen bg-[#F5F5F5] px-4 py-10 mt-15 md:mt-15 sm:mt-15">
+    <div className="min-h-screen bg-[#F5F5F5] px-4 py-10 mt-15 ">
       {/* SEO */}
       <Helmet>
         <title>{title} - Advanced IT</title>

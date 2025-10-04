@@ -1,7 +1,7 @@
 import "../../src/index.css";
 import talha from "../assets/teamMember/talha.webp";
 import mizan from "../assets/teamMember/mizan.webp";
-import morshed from "../assets/teamMember/morshed.webp";
+import morshed from "../assets/teamMember/mdmorshedali.webp";
 import arouf from "../assets/teamMember/abdur_rouf.webp";
 import raihan from "../assets/teamMember/raihan.webp";
 import naim from "../assets/teamMember/naim.webp";

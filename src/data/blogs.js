@@ -2,7 +2,75 @@ import writeCustomDelugeScriptsForAnyZohoApps from "../assets/blogs/write-custom
 import expertZohoWebsiteDesignService from "../assets/blogs/design-and-develop-a-responsive-website-using-zoho-sites-and-zoho-commerce.webp";
 import expertZohoCreatorService from "../assets/blogs/expertZohoCreatorService.webp";
 import expertZohoSalesIQService from "../assets/blogs/expertZohoSalesIQService.webp";
+import zohobiginq32025pdates from "../assets/blogs/zoho-bigin-q3-2025-updates.webp";
+
+// Blogs
 export const blogs = [
+  /* --- Blogs  Start --- */
+
+  // Blog 5: Zoho Books Q3 2025 Updates
+  {
+    id: "zoho-bigin-q3-2025-updates",
+    title: "Zoho Bigin Q3 2025 Updates – Smarter, Faster & More Connected",
+    date: "2025-10-04",
+    author: "Abdur Rouf",
+    image: `${zohobiginq32025pdates}`,
+    content: {
+      header: `🚀 Bigin Q3 2025 Updates are here!`,
+      description: `Zoho’s Bigin CRM just got even more powerful, affordable, and easier to use. Packed with automation, mobility, and AI-driven features, these updates are designed to help small businesses scale faster without complexity. Here’s what’s new this quarter 👇`,
+
+      servicesInclude: `
+💬 WhatsApp Automation
+- Create interactive WhatsApp templates with images, videos & CTAs  
+- Personalize messages with merge fields (Order #, Customer Name, etc.)  
+- Automate delivery updates, thank-you notes, and cross-sell campaigns using Workflows  
+
+📅 Smarter Scheduling with Booking Pages
+- Customers can easily book online/offline meetings  
+- Auto-generate Zoom/Zoho Meeting links  
+- Add offline meeting details directly to your calendar  
+
+🍏 Upgrades for Apple Devices
+- Sleek new Liquid Glass design on iOS 26, iPadOS 26, macOS Tahoe & watchOS 26  
+- AI-powered call transcripts, smart suggestions & daily to-do lists  
+- Brand new Apple Watch app: track tasks, calls, revenue & share business card via QR code  
+
+🔍 Audit Logs & Enhanced Calling
+- Precise filters to track any action performed in CRM  
+- Improved telephony & RingCentral integration on iOS/iPadOS  
+    `,
+
+      whyChooseMe: `
+I help businesses integrate Zoho apps like Bigin to maximize productivity, automate workflows, and improve customer engagement. With these Q3 2025 updates, small businesses can now access enterprise-level CRM features at a fraction of the cost.`,
+
+      otherInfo: `
+👉 With Bigin, your business gets automation, mobility, and AI—all at your fingertips.  
+
+Ready to see how Bigin can transform your business? Let’s implement it together.  
+    `,
+
+      whyUs: `
+Official Zoho Expert  
+5+ Years of Domain Expertise  
+Tailored Zoho CRM & Bigin Solutions  
+Affordable Implementation Packages  
+Automation, AI & Third-Party Integrations  
+Ongoing Support and Guidance  
+    `,
+    },
+    tags: [
+      "ZohoBigin",
+      "WhatsAppAutomation",
+      "AppleUpdates",
+      "BusinessGrowth",
+      "CRM",
+      "ZohoExpert",
+      "AdvancedIT",
+      "DevAbdurRouf",
+    ],
+    link: `https://www.fiverr.com/dev_abdur_rouf`,
+  },
+
   // Blog 1: Deluge Script
   {
     id: "write-custom-deluge-scripts-for-any-zoho-apps",
@@ -57,6 +125,7 @@ Let’s get started today.
     ],
     link: `https://www.fiverr.com/dev_abdur_rouf/write-deluge-scripts-for-any-zoho-apps`,
   },
+
   // Blog 2: Zoho Sites
   {
     id: "design-and-develop-a-responsive-website-using-zoho-sites-and-zoho-commerce",

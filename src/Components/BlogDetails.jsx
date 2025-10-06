@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { Helmet } from "react-helmet";
 import {
   TbBrandFiverr,
+  TbBrandLinkedin,
   TbBulb,
   TbRocket,
   TbTools,
@@ -51,7 +52,7 @@ const BlogDetails = () => {
   } = blog;
 
   return (
-    <div className="min-h-screen bg-[#F5F5F5] px-4 py-10 mt-15 ">
+    <div className="min-h-screen bg-[#F5F5F5] px-4 py-10 mt-15">
       {/* SEO */}
       <Helmet>
         <title>{title} - Advanced IT</title>
@@ -173,7 +174,7 @@ const BlogDetails = () => {
 
             {/* Fiverr CTA */}
             {link && (
-              <div className="mt-10 bg-[#1dbf73]/10 p-4 border border-[#1dbf73] rounded-2xl flex items-center justify-between shadow-sm">
+              <div className="mt-10 bg-[#1dbf73]/10 p-4 border border-[#1dbf73] rounded-2xl flex flex-col sm:flex-row items-center justify-between shadow-sm">
                 <div className="flex items-center gap-2">
                   <TbBrandFiverr className="text-[#1dbf73] text-2xl" />
                   <span className="font-medium text-[#1dbf73]">
@@ -183,13 +184,31 @@ const BlogDetails = () => {
                 <a
                   href={link}
                   target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-[#1dbf73] text-white px-4 py-1.5 rounded-full hover:bg-[#17a964] transition"
+                  rel="nofollow noopener noreferrer external"
+                  className="mt-2 sm:mt-0 bg-[#1dbf73] text-white px-4 py-1.5 rounded-full hover:bg-[#17a964] transition"
                 >
                   View on Fiverr
                 </a>
               </div>
             )}
+
+            {/* LinkedIn CTA */}
+            <div className="mt-4 bg-[#0077B5]/10 p-4 border border-[#0077B5] rounded-2xl flex flex-col sm:flex-row items-center justify-between shadow-sm">
+              <div className="flex items-center gap-2">
+                <TbBrandLinkedin className="text-[#0077B5] text-2xl" />
+                <span className="font-medium text-[#0077B5]">
+                  Connect with me on LinkedIn
+                </span>
+              </div>
+              <a
+                href="https://www.linkedin.com/in/abdur-rouf-ar/"
+                target="_blank"
+                rel="nofollow noopener noreferrer external"
+                className="mt-2 sm:mt-0 bg-[#0077B5] text-white px-4 py-1.5 rounded-full hover:bg-[#006097] transition"
+              >
+                Visit LinkedIn
+              </a>
+            </div>
 
             {/* Tags */}
             <div className="mt-8 flex flex-wrap gap-2">

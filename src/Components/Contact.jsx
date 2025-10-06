@@ -72,7 +72,7 @@ const Contact = () => {
     {
       icon: <FaWhatsapp className="text-4xl" />,
       name: "WhatsApp",
-      link: "https://wa.me/1749569015",
+      link: "https://wa.me/1518980983",
     },
     {
       icon: <TfiEmail className="text-4xl" />,

@@ -3,10 +3,161 @@ import expertZohoWebsiteDesignService from "../assets/blogs/design-and-develop-a
 import expertZohoCreatorService from "../assets/blogs/expertZohoCreatorService.webp";
 import expertZohoSalesIQService from "../assets/blogs/expertZohoSalesIQService.webp";
 import zohobiginq32025pdates from "../assets/blogs/zoho-bigin-q3-2025-updates.webp";
+import ZohoSign from "../assets/blogs/ZohoSign.webp";
+import rfqZohoCreatorZohoBooks from "../assets/blogs/ZohoCreator-ZohoBooks-AbdurRouf-advanced-it.top.webp";
 
 // Blogs
 export const blogs = [
   /* --- Blogs  Start --- */
+
+  // Blog 7: RFQ Process
+  {
+    id: "automate-rfqs-with-zoho-creator-and-zoho-books",
+    title: "Automate RFQs with Zoho Creator & Zoho Books",
+    date: "2025-10-06",
+    author: "Abdur Rouf",
+    image: `${rfqZohoCreatorZohoBooks}`,
+    content: {
+      header: `Simplify and automate your RFQ (Request for Quotation) process with Zoho Creator and Zoho Books.`,
+      description: `Managing RFQs manually through spreadsheets and emails can be time-consuming and error-prone. With Zoho Creator and Zoho Books integration, businesses can digitize their procurement process — improving efficiency, accuracy, and speed.`,
+
+      servicesInclude: `
+What is an RFQ (Request for Quotation)?  
+An RFQ is a formal business process where companies invite suppliers to submit price quotes for goods or services. It helps procurement teams compare pricing, evaluate vendors, and make better purchasing decisions.
+
+Traditionally, RFQs involve:
+- Multiple spreadsheets  
+- Endless email threads  
+- Manual data entry and tracking  
+
+This approach slows operations and increases the risk of errors.
+    `,
+
+      whyChooseMe: `
+How Zoho Creator Simplifies RFQs  
+Zoho Creator — Zoho’s low-code app builder — allows you to create a custom RFQ management system tailored to your business needs, without coding.
+
+With Zoho Creator, you can:
+1. Design intelligent RFQ forms to capture supplier details, items, and pricing.  
+2. Automate manager and finance approvals.  
+3. Integrate directly with Zoho Books for financial sync.  
+4. Generate purchase orders or invoices automatically once a quote is approved.
+    `,
+
+      otherInfo: `
+Why Integrate with Zoho Books?  
+Zoho Books ensures all your financials, inventory, and supplier data stay connected.
+
+When paired with Zoho Creator:
+- RFQ data flows directly into Zoho Books.  
+- Approved quotes instantly convert to purchase orders or bills.  
+- No duplicate data entry.  
+- Reduced turnaround times.  
+    `,
+
+      whyUs: `
+The Output — Smarter, Faster Procurement  
+Combining Zoho Creator and Zoho Books gives you:
+- Centralized RFQ tracking  
+- Real-time supplier insights  
+- Automated approvals & document generation  
+- Accurate, up-to-date financial reporting  
+
+Together, they bring automation, accuracy, and agility to your procurement workflows — saving hours of manual effort and ensuring seamless data consistency.
+    `,
+    },
+    tags: [
+      "ZohoCreator",
+      "ZohoBooks",
+      "RFQ",
+      "ProcurementAutomation",
+      "BusinessWorkflow",
+      "LowCodeDevelopment",
+      "ZohoIntegration",
+      "AdvancedIT",
+      "DevAbdurRouf",
+      "AbdurRouf",
+      "DigitalTransformation",
+      "Automation",
+      "ZohoDeveloper",
+      "Zoho",
+      "CRM",
+      "ZohoCRM",
+    ],
+    link: `https://www.fiverr.com/dev_abdur_rouf`,
+  },
+
+  // Blog 6: Zoho Sign
+
+  {
+    id: "navigating-the-future-of-electronic-signatures",
+    title:
+      "Navigating the Future of Electronic Signatures: Market Growth & Innovation",
+    date: "2025-10-05",
+    author: "Abdur Rouf",
+    image: `${ZohoSign}`,
+    content: {
+      header: `The Future of Electronic Signatures is Here — Smarter, Secure, and Sustainable.`,
+      description: `The world of electronic signatures is evolving faster than ever — transforming from a simple utility into a strategic powerhouse driving digital transformation across industries. As organizations move toward automation and remote collaboration, eSignatures have become the backbone of modern business workflows.`,
+
+      servicesInclude: `
+📈 The Market Outlook
+1. Global eSignature market hit $3.9B in 2023, projected to reach $17.9B by 2030 (CAGR 24.3%)
+2. Growth driven by:
+   - Efficiency & paperless operations  
+   - Remote & hybrid work  
+   - Advanced security & biometrics  
+   - Sustainability initiatives  
+    `,
+
+      whyChooseMe: `
+💡 Zoho’s Leadership with Zoho Sign  
+Recognized by Frost & Sullivan as a high-growth performer, Zoho Sign stands out as a secure and scalable digital signing solution trusted worldwide.
+
+Key highlights:
+- Deep integration with Zoho CRM, Books, and Forms  
+- Military-grade encryption & tamper-evident audit trails  
+- Global compliance with regional data centers  
+- Trusted by 40,000+ companies and 250,000+ users  
+    `,
+
+      otherInfo: `
+🏠 Real-World Impact — Real Estate Use Case  
+Zoho Sign simplifies complex property deals and legal agreements:
+1. Auto-populates agreements directly from Zoho CRM  
+2. Sends documents for instant eSignatures  
+3. Tracks progress and signing status in real time  
+4. Archives signed contracts securely — all without switching apps  
+    `,
+
+      whyUs: `
+🤖 The Future: Intelligent Agreement Management  
+Next-gen eSignature tools like Zoho Sign are evolving with AI capabilities to:
+- Predict risks  
+- Extract key contract data  
+- Automate post-signing workflows  
+
+Zoho isn’t just redefining digital signatures — it’s shaping the foundation of trusted, intelligent digital business infrastructure.
+
+Read Full Article: https://www.zoho.com/blog/sign/future-of-electronic-signatures-frost-and-sullivan.html
+
+Want to integrate Zoho Sign into your CRM or automate your document workflows? Let’s make it happen.
+    `,
+    },
+    tags: [
+      "ZohoSign",
+      "eSignature",
+      "DigitalTransformation",
+      "BusinessAutomation",
+      "ZohoCRM",
+      "ZohoBooks",
+      "ZohoIntegration",
+      "ZohoCreator",
+      "AdvancedIT",
+      "DevAbdurRouf",
+    ],
+    link: `https://www.fiverr.com/dev_abdur_rouf`,
+  },
 
   // Blog 5: Zoho Books Q3 2025 Updates
   {

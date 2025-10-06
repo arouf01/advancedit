@@ -88,7 +88,7 @@ const BlogDetails = () => {
               src={image}
               alt={title}
               title={title}
-              className="w-full h-64 md:h-72 lg:h-80 object-cover rounded-xl mb-6 shadow-lg"
+              className="w-full max-h-[600px] object-contain rounded-xl mb-6 shadow-lg mx-auto"
             />
           )}
 

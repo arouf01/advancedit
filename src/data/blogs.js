@@ -6,12 +6,87 @@ import zohobiginq32025pdates from "../assets/blogs/zoho-bigin-q3-2025-updates.we
 import ZohoSign from "../assets/blogs/ZohoSign.webp";
 import rfqZohoCreatorZohoBooks from "../assets/blogs/ZohoCreator-ZohoBooks-AbdurRouf-advanced-it.top.webp";
 import zohoSAAS from "../assets/blogs/zoho-zohocrm-zohoCreator-zohoBooks-zohoCRM-abdurRouf-advancedIT.webp";
+import zohoCampaignsVsAutomationImage from "../assets/blogs/ZohoCampaigns-ZohoMarketing Automation-AbdurRouf-advaned-it.top.webp";
 
 // Blogs
 export const blogs = [
   /* --- Blogs  Start --- */
 
-  // Blog 8:
+  // Blog 9: Zoho Campaigns and Zoho Automation
+  {
+    id: "difference-between-zoho-campaigns-and-zoho-marketing-automation",
+    title:
+      "What’s the Difference Between Zoho Campaigns and Zoho Marketing Automation?",
+    date: "2025-10-09",
+    author: "Abdur Rouf",
+    image: `${zohoCampaignsVsAutomationImage}`,
+    content: {
+      header: `Choosing the right Zoho marketing tool can make or break your digital campaigns.`,
+      description: `If you’re part of the Zoho ecosystem and wondering how Zoho Campaigns differs from Zoho Marketing Automation, here’s a clear breakdown to help you decide which tool fits your business goals best.`,
+
+      servicesInclude: `
+Zoho Campaigns: Simplified Email & SMS Marketing 
+Zoho Campaigns is designed for businesses that want to send engaging newsletters, promotions, and updates — without complexity.  
+It’s perfect for small and medium-sized businesses (SMEs) and marketing teams looking for a user-friendly, affordable, and efficient way to communicate with their audience.
+
+Key Features:  
+1. Create and schedule email & SMS campaigns using beautiful templates.  
+2. Automate simple workflows like welcome, reactivation, and retention campaigns.  
+3. Track essential metrics like opens, clicks, and bounce rates.  
+4. Integrate easily with Zoho CRM, SalesIQ, and Zoho Meeting.  
+
+Best For: Businesses focusing on straightforward, email-first communication.
+    `,
+
+      whyChooseMe: `
+Zoho Marketing Automation: Full-Funnel Marketing Power  
+For businesses that need advanced workflows, multichannel engagement, and lead management — Zoho Marketing Automation takes things to the next level.  
+
+Key Highlights:
+1. Manage email, SMS, web, and social media channels in one dashboard.  
+2. Design complex workflows that adapt dynamically to customer behavior.  
+3. Capture and nurture leads via forms, landing pages, and scoring.  
+4. Track visitor journeys, conversions, and campaign ROI.  
+5. Integrate seamlessly with Zoho CRM, Analytics, SalesIQ, and Zoho Ads.  
+
+Best For: Medium to large businesses running **data-driven, multi-step marketing campaigns.
+    `,
+
+      otherInfo: `
+Which One Should You Choose?
+If your goal is to send beautiful, simple email or SMS campaigns, go with Zoho Campaigns.  
+But if you want to manage the entire marketing funnel, score leads, and optimize ROI across multiple channels — Zoho Marketing Automation is the smarter choice.  
+
+Zoho Campaigns = Simple, effective email marketing.  
+Zoho Marketing Automation = Powerful, full-funnel engagement.  
+Pick the one that fits your business strategy and scale.
+    `,
+
+      whyUs: `
+Need Expert Help with Zoho Marketing Tools? 
+As a Zoho-certified professional, I help businesses set up, integrate, and automate their marketing systems using Zoho Campaigns and Zoho Marketing Automation — ensuring maximum efficiency and measurable ROI.  
+    `,
+    },
+    tags: [
+      "ZohoCampaigns",
+      "ZohoMarketingAutomation",
+      "ZohoCRM",
+      "EmailMarketing",
+      "MarketingAutomation",
+      "ZohoIntegration",
+      "DigitalMarketing",
+      "AdvancedIT",
+      "DevAbdurRouf",
+      "AbdurRouf",
+      "ZohoTools",
+      "CRM",
+      "Automation",
+      "SMBMarketing",
+      "FullFunnelMarketing",
+    ],
+    link: `https://www.fiverr.com/dev_abdur_rouf`,
+  },
+  // Blog 8: Saas Market
   {
     id: "future-of-work-middle-east-saas-market",
     title:

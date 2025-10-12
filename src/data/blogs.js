@@ -7,11 +7,95 @@ import ZohoSign from "../assets/blogs/ZohoSign.webp";
 import rfqZohoCreatorZohoBooks from "../assets/blogs/ZohoCreator-ZohoBooks-AbdurRouf-advanced-it.top.webp";
 import zohoSAAS from "../assets/blogs/zoho-zohocrm-zohoCreator-zohoBooks-zohoCRM-abdurRouf-advancedIT.webp";
 import zohoCampaignsVsAutomationImage from "../assets/blogs/ZohoCampaigns-ZohoMarketing Automation-AbdurRouf-advaned-it.top.webp";
+import zohocmMultiSelectLookupField from "../assets/blogs/zohocrm-multi-select-lookup-field.webp";
 
 // Blogs
 export const blogs = [
   /* --- Blogs  Start --- */
 
+  // Blog 10:
+
+  {
+    id: "understanding-zoho-crm-multi-select-lookup-and-linking-module",
+    title:
+      "Understanding Zoho CRM’s Multi-Select Lookup & Linking Module — The Power of Many-to-Many Relationships",
+    date: "2025-10-12",
+    author: "Abdur Rouf",
+    image: `${zohocmMultiSelectLookupField}`,
+    content: {
+      header: `In Zoho CRM, relationships between records define how your data connects — and that’s where Multi-Select Lookup Fields and Linking Modules shine.`,
+      description: `While standard Lookup fields handle one-to-many relationships (like one Owner linked to many Properties), many real-world use cases require many-to-many relationships — for example, a single Policyholder having multiple Policies, and each Policy belonging to multiple Policyholders. That’s where Zoho CRM’s Multi-Select Lookup and Linking Module come in.`,
+
+      servicesInclude: `
+Multi-Select Lookup: Build Many-to-Many Relationships 
+The Multi-Select Lookup field lets you associate multiple records between two modules — enabling a flexible, bi-directional connection.
+
+Example:
+An insurance company wants to connect PolicyHolders and Insurance Policies.
+
+- One PolicyHolder can hold several Policies.  
+- One Policy can be linked to several PolicyHolders.  
+
+With a Multi-Select Lookup, you can easily map this relationship and view it in both modules.  
+
+You can add up to 2 multi-select lookup fields per module, and if more are needed, Zoho allows related lists (up to 10) for advanced relationship mapping.
+    `,
+
+      whyChooseMe: `
+What is a Linking Module?
+When you create a Multi-Select Lookup, Zoho CRM automatically generates a Linking Module — a special junction module that holds relationship data between two modules.
+
+Think of it like a bridge that connects both sides:  
+Each record in the Linking Module represents one connection between two records — and you can even add custom fields (like Rent Amount, Effective Date, or Relationship Type) to store link-specific data.
+
+Example:
+A Linking Module between Properties and Tenants could store fields like Lease Start Date, Rent Amount, or Agreement Status.
+
+How It Works:
+Each module shows a Related List of linked records.  
+You can add, edit, or remove associations directly.  
+Zoho automatically manages the background connections through the Linking Module.  
+
+The Linking Module can be fully customized — you can add fields, rearrange layouts, set permissions, and even generate reports based on it.
+    `,
+
+      otherInfo: `
+Reporting & Insights  
+Reports and dashboards can be built using the Linking Module like any other CRM module.  
+When reporting on one primary module, include the Linking Module to bring in data from associated modules — powerful for relationship-based analytics!
+
+Key Notes  
+- You can’t import data directly into Multi-Select Lookup fields.  
+- Custom Views based on them aren’t supported (use the Linking Module instead).  
+- Deleting a primary record removes its linking records too (restored if the parent is restored).  
+- Linking Modules can’t have their own related lists — except Notes.
+    `,
+
+      whyUs: `
+Multi-Select Lookups and Linking Modules make Zoho CRM truly relational — allowing your data to interact in realistic, dynamic ways.  
+Need Help Setting Up Zoho CRM Relationships?  
+As a Zoho expert, I help businesses design, automate, and optimize their CRM architecture — including Multi-Select Lookups, Linking Modules, and advanced workflows.  
+    `,
+    },
+    tags: [
+      "ZohoCRM",
+      "ZohoCustomization",
+      "MultiSelectLookup",
+      "LinkingModule",
+      "CRMRelationships",
+      "ZohoDeveloper",
+      "AdvancedIT",
+      "DevAbdurRouf",
+      "ZohoTips",
+      "Automation",
+      "CRMIntegration",
+      "ZohoCreator",
+      "ZohoConsultant",
+      "CRMReports",
+      "ManyToMany",
+    ],
+    link: `https://www.fiverr.com/dev_abdur_rouf`,
+  },
   // Blog 9: Zoho Campaigns and Zoho Automation
   {
     id: "difference-between-zoho-campaigns-and-zoho-marketing-automation",

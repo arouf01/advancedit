@@ -96,21 +96,6 @@ const BlogList = () => {
                   {blog.content?.description?.slice(0, 120)}...
                 </p>
 
-                {/* Fiverr Link */}
-                {blog?.link && (
-                  <p className="mt-3 text-sm text-purple-700 flex items-center gap-1">
-                    <TbBrandFiverr className="text-green-600 text-lg" />
-                    <a
-                      href={blog.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:underline font-medium"
-                    >
-                      View Gig on Fiverr
-                    </a>
-                  </p>
-                )}
-
                 {/* Tags */}
                 <div className="flex flex-wrap mt-3 gap-2">
                   {blog.tags.map((tag) => (

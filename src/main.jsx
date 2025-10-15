@@ -21,6 +21,7 @@ import WriteDelugeScripts from "./Components/blogs/WriteDelugeScripts.jsx";
 import ZohoWebsiteDesign from "./Components/blogs/ZohoWebsiteDesign.jsx";
 import ZohoCreatorAppDevelopment from "./Components/blogs/ZohoCreatorAppDevelopment.jsx";
 import ZohoSalesIQEngagement from "./Components/blogs/ZohoSalesIQEngagement.jsx";
+import Windows10EndSupport from "./Components/blogs/Windows10EndSupport.jsx";
 
 const router = createBrowserRouter([
   {
@@ -98,6 +99,10 @@ const router = createBrowserRouter([
       {
         path: "/blogs/boost-customer-engagement-with-zoho-salesiq",
         element: <ZohoSalesIQEngagement />,
+      },
+      {
+        path: "/blogs/windows-10-end-support",
+        element: <Windows10EndSupport />,
       },
     ],
   },

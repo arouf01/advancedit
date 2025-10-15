@@ -9,10 +9,41 @@ import zohoSAAS from "../assets/blogs/zoho-zohocrm-zohoCreator-zohoBooks-zohoCRM
 import zohoCampaignsVsAutomationImage from "../assets/blogs/ZohoCampaigns-ZohoMarketing Automation-AbdurRouf-advaned-it.top.webp";
 import zohocmMultiSelectLookupField from "../assets/blogs/zohocrm-multi-select-lookup-field.webp";
 import zohoBlueprintImage from "../assets/blogs/ZohoCRM-BluePrint.webp";
+import windows10EndImage from "../assets/blogs/Windows10-EndSupport.webp";
 
 // Blogs
 export const blogs = [
   /* --- Blogs  Start --- */
+
+  // Blog 12: Windows 10
+  {
+    id: "windows-10-end-support",
+    title: "Windows 10 Support Ends Soon — Is Your Business Ready?",
+    date: "15th Oct 2025",
+    author: "Abdur Rouf",
+    image: `${windows10EndImage}`,
+    content: {
+      description:
+        "Microsoft officially ends support for Windows 10 on October 14, 2025. Learn why upgrading to Windows 11 is critical for your business security and compliance.",
+    },
+    tags: [
+      "Windows10",
+      "Windows11",
+      "Cybersecurity",
+      "MicrosoftUpdate",
+      "BusinessIT",
+      "AdvancedIT",
+      "AbdurRouf",
+      "DataProtection",
+      "BusinessSecurity",
+      "DigitalTransformation",
+      "Microsoft",
+      "ITUpgrade",
+      "TechUpdate",
+      "CyberRisk",
+      "BusinessContinuity",
+    ],
+  },
 
   // Blog 11: Zoho CRM Blueprint
   {

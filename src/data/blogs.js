@@ -10,10 +10,41 @@ import zohoCampaignsVsAutomationImage from "../assets/blogs/ZohoCampaigns-ZohoMa
 import zohocmMultiSelectLookupField from "../assets/blogs/zohocrm-multi-select-lookup-field.webp";
 import zohoBlueprintImage from "../assets/blogs/ZohoCRM-BluePrint.webp";
 import windows10EndImage from "../assets/blogs/Windows10-EndSupport.webp";
+import ZohoRecruitZiaAI from "../assets/blogs/ZohoRecruitZiaAI.webp";
 
 // Blogs
 export const blogs = [
   /* --- Blogs  Start --- */
+
+  // Blog 13: Zoho Recruit - ZIA
+  {
+    id: "smarter-hiring-with-ai-zoho-recruit-zia",
+    title: "Smarter Hiring with AI: Meet Zia from Zoho Recruit!",
+    date: "19th Oct 2025",
+    author: "Abdur Rouf",
+    image: `${ZohoRecruitZiaAI}`,
+    content: {
+      description:
+        "Discover how Zoho Recruit’s AI assistant Zia transforms hiring — from writing job descriptions to smart sourcing, automated assessments, and seamless communication — helping HR teams hire smarter and faster.",
+    },
+    tags: [
+      "ZohoRecruit",
+      "ZiaAI",
+      "HRTech",
+      "AIAutomation",
+      "Recruitment",
+      "SmartHiring",
+      "AdvancedIT",
+      "DevAbdurRouf",
+      "HiringMadeEasy",
+      "Automation",
+      "TalentAcquisition",
+      "AIinHR",
+      "DigitalRecruiting",
+      "WorkflowAutomation",
+      "BusinessProductivity",
+    ],
+  },
 
   // Blog 12: Windows 10
   {

@@ -11,10 +11,42 @@ import zohocmMultiSelectLookupField from "../assets/blogs/zohocrm-multi-select-l
 import zohoBlueprintImage from "../assets/blogs/ZohoCRM-BluePrint.webp";
 import windows10EndImage from "../assets/blogs/Windows10-EndSupport.webp";
 import ZohoRecruitZiaAI from "../assets/blogs/ZohoRecruitZiaAI.webp";
+import zohoCreatorRFQImage from "../assets/blogs/zohoCreatorRFQImage.webp";
 
 // Blogs
 export const blogs = [
   /* --- Blogs  Start --- */
+
+  // Blog 14: Zoho Creator RFQ
+  {
+    id: "simplify-rfq-management-with-zoho-creator",
+    title: "Simplify RFQ Management with Zoho Creator",
+    date: "29th Oct 2025",
+    author: "Abdur Rouf",
+    image: `${zohoCreatorRFQImage}`,
+    content: {
+      description:
+        "Discover how Zoho Creator simplifies Request for Quotation (RFQ) management with automation, Zoho Books integration, smart vendor selection, and real-time reports — all without complex setup.",
+    },
+    tags: [
+      "ZohoCreator",
+      "ZohoBooks",
+      "RFQ",
+      "ProcurementAutomation",
+      "DigitalTransformation",
+      "AdvancedIT",
+      "DevAbdurRouf",
+      "Zoho",
+      "Automation",
+      "LowCode",
+      "BusinessEfficiency",
+      "AbdurRouf",
+      "Fiverr",
+      "kwork",
+      "ZohoCRM",
+      "ZohoInventory",
+    ],
+  },
 
   // Blog 13: Zoho Recruit - ZIA
   {

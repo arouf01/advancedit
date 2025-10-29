@@ -23,6 +23,7 @@ import ZohoCreatorAppDevelopment from "./Components/blogs/ZohoCreatorAppDevelopm
 import ZohoSalesIQEngagement from "./Components/blogs/ZohoSalesIQEngagement.jsx";
 import Windows10EndSupport from "./Components/blogs/Windows10EndSupport.jsx";
 import ZohoRecruitZiaAI from "./Components/blogs/ZohoRecruitZiaAI.jsx";
+import ZohoCreatorRFQ from "./Components/blogs/ZohoCreatorRFQ.jsx";
 
 const router = createBrowserRouter([
   {
@@ -108,6 +109,10 @@ const router = createBrowserRouter([
       {
         path: "/blogs/smarter-hiring-with-ai-zoho-recruit-zia",
         element: <ZohoRecruitZiaAI />,
+      },
+      {
+        path: "/blogs/simplify-rfq-management-with-zoho-creator",
+        element: <ZohoCreatorRFQ />,
       },
     ],
   },

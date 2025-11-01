@@ -24,6 +24,7 @@ import ZohoSalesIQEngagement from "./Components/blogs/ZohoSalesIQEngagement.jsx"
 import Windows10EndSupport from "./Components/blogs/Windows10EndSupport.jsx";
 import ZohoRecruitZiaAI from "./Components/blogs/ZohoRecruitZiaAI.jsx";
 import ZohoCreatorRFQ from "./Components/blogs/ZohoCreatorRFQ.jsx";
+import AICoCreatorZohoCreator from "./Components/blogs/AICoCreatorZohoCreator.jsx";
 
 const router = createBrowserRouter([
   {
@@ -113,6 +114,10 @@ const router = createBrowserRouter([
       {
         path: "/blogs/simplify-rfq-management-with-zoho-creator",
         element: <ZohoCreatorRFQ />,
+      },
+      {
+        path: "/blogs/smartest-fastest-development-team",
+        element: <AICoCreatorZohoCreator />,
       },
     ],
   },

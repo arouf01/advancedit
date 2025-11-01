@@ -12,10 +12,41 @@ import zohoBlueprintImage from "../assets/blogs/ZohoCRM-BluePrint.webp";
 import windows10EndImage from "../assets/blogs/Windows10-EndSupport.webp";
 import ZohoRecruitZiaAI from "../assets/blogs/ZohoRecruitZiaAI.webp";
 import zohoCreatorRFQImage from "../assets/blogs/zohoCreatorRFQImage.webp";
+import aiCoCreatorImage from "../assets/blogs/Zoho-CoCreator-AI-AbdurRouf-advanced-it.webp";
 
 // Blogs
 export const blogs = [
   /* --- Blogs  Start --- */
+
+  // Blog 15: zoho Creator
+  {
+    id: "smartest-fastest-development-team",
+    title:
+      "Say Hello to the Smartest, Fastest Development Team: AI, Low-Code & You!",
+    date: "1st Nov 2025",
+    author: "Abdur Rouf",
+    image: `${aiCoCreatorImage}`,
+    content: {
+      description:
+        "Explore how Zoho CoCreator unites AI, low-code, and human creativity to build apps faster and smarter. Generate forms, workflows, and code instantly with your new AI-powered development partner.",
+    },
+    tags: [
+      "ZohoCreator",
+      "CoCreator",
+      "AIDevelopment",
+      "LowCode",
+      "AppBuilder",
+      "Automation",
+      "DigitalTransformation",
+      "AdvancedIT",
+      "DevAbdurRouf",
+      "ZohoAI",
+      "Deluge",
+      "NoCode",
+      "AIWorkflow",
+      "BusinessApps",
+    ],
+  },
 
   // Blog 14: Zoho Creator RFQ
   {

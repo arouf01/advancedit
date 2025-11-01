@@ -44,13 +44,13 @@ const Contact = () => {
     try {
       setLoading(true);
       const response = await axios.post(
-        "https://advanced-it-top-biyp.onrender.com/send-email",
+        "https://ait.bitcodezoho.pro/send-email",
         formData,
         { headers: { "Content-Type": "application/json" } }
       );
 
       if (response.data.messageID) {
-        toast.success("✅ Email Sent Successfully", {
+        toast.success("Email Sent Successfully", {
           position: "bottom-right",
           autoClose: 3000,
           transition: Bounce,
